@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    section {
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      color: #63a2cc;
+      margin-bottom: 20px; /* Adjust the margin as needed */
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    li {
+      margin-bottom: 5px;
+      font-family: 'Arial', sans-serif; /* Adjust the font as needed */
+      position: relative;
+      padding-left: 20px; /* Adjust the space between bullet and text */
+    }
+  
+    li::before {
+      content: '\2022'; /* Unicode character for bullet point */
+      color: #63a2cc; /* Adjust the color of the bullet point */
+      position: absolute;
+      left: 0;
+    }
+  </style>  
+  
+  <meta charset="utf-8">
+  <title>Port - Commands</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/coloring.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/txtformatting.css">
+  <link rel="stylesheet" type="text/css" href="./css/shadow.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+  </div>
+  <main class="main">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-nav">
+          <div class="navbar-brand">
+            <span class="navbar-brand-txt"><a class="txt-bold type-1" href="index.html">Port</a></span>
+          </div>
+          <span class="navbar-toggler" id="toggler"><i onclick="toggleNavbar(this)" class="fas fa-bars"></i></span>
+          <div class="navs" id="navs">
+            <div class="navs-item notbtn"><a href="Commands.html" class="txt-uppercase">Commands</a></div>
+            <div class="navs-item notbtn"><a href="https://discord.gg/port" class="txt-uppercase">Support</a></div>
+            <div class="navs-item notbtn"><a href="https://discord.com/api/oauth2/authorize?client_id=638482876383625257&permissions=8&scope=bot" class="txt-uppercase">Invite</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar end -->
+    <div class="container">
+    <section>
+        <h2>INFORMATION</h2>
+        <ul>
+            <li>tos - Terms of service of the bot</li>
+            <li>botinfo - gets information about the bot</li>
+            <li>botinvite - Gets an invite link to add this bot</li>
+            <li>bots - tells how many bots bots are there in the server</li>
+            <li>cmdsused -view the amount of commands you used</li>
+            <li>commands - views commands of the bot</li>
+            <li>credits - shows who created the bot</li>
+            <li>donate - support the creator of the bot</li>
+            <li>embed-builder - a guide on how to send embeds</li>
+            <li>emojilist - shows you the emojis in the server</li>
+            <li>help - its just a help command brah</li>
+            <li>inrole - view users with a specific role</li>
+            <li>invite - gets invite of the bot</li>
+            <li>invites - checks a user's invite</li>
+            <li>memberscount - checks number of members in a server</li>
+            <li>messages - checks your messages in a server</li>
+            <li>mutuals - checks your mutuals with the bot</li>
+            <li>names - checks your past names if you changed any</li>
+            <li>nicknames - changes the nickname</li>
+            <li>oldest - checks the oldest user in the server</li>
+            <li>ping - checks the ping of the bot</li>
+            <li>recentemojis - sees your recent emojis</li>
+            <li>roleinfo - checks info about a role</li>
+            <li>roles - see how many or what roles aare there in a server</li>
+            <li>roundup - sees the roundup ping of the bot</li>
+            <li>rules - rules of the bot</li>
+            <li>serverinfo - information about a server</li>
+            <li>stickerinfo - gets information about a sticker</li>
+            <li>support - gets invite to the support server of the bot</li>
+            <li>update - updates the developers of the bot about a bug</li>
+            <li>uptime - sees the uptime of the bot</li>
+            <li>userinfo - gets information about a user</li>
+            <li>youngest - checks the youngest user in a guild</li>
+            <li>emojiinfo - gets information about an emoji</li>
+            <li>playlist - W playlist of the devs</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>CONFIGURE</h2>
+        <ul>
+            <li>antinuke - enables antinuke on the server</li>
+            <li>antiraid - enables antinuke on the server</li>
+            <li>auto-response - sets auto-response in a server</li>
+            <li>autorole - toggles autorole for a server upon joining</li>
+            <li>custom-command - creates a custom command for a server</li>
+            <li>editembed - edits a embed sent by the bot</li>
+            <li>joindm - configures join dm when a user joins a server</li>
+            <Li>messagelog - logs messages in a channel</Li>
+            <Li>prefix - configures prefix for a server</Li>
+            <li>reactionrole-setup - toggles reaction roles</li>
+            <Li>resetroleicon - resets role icon of a role</Li>
+            <li>sendinv - sends invite</li>
+            <li>setavatar - sets the icon of the server</li>
+            <li>set banner - sets the banner of the server</li>
+            <li>setservername - sets the name of the server</li>
+            <li>setsplash - sets invite splash of the server</li>
+            <li>welcome - configures welcome messages for a server</li>
+            <li>webhook - creates and sends messages through webhook</li>
+            <li>antiwords - blocks bad words in a server</li>
+            <li>antilink - blocks all the links</li>
+            <li>announce - sends an announcement to a channel</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>UTILITIES</h2>
+        <ul>
+            <li>afk - sets user afk</li>
+            <li>avatar - shows a user avatar</li>
+            <li>banner - shows your banner</li>
+            <li>color - shows color code for a hex</li>
+            <li>copyembed - copies embed</li>
+            <li>define - defines something</li>
+            <li>embed - creates embed</li>
+            <li>enlarge - enlarge an emoji or sticker</li>
+            <li>firstmsg - sees first message in a channel</li>
+            <li>github - gets someone github profile</li>
+            <li>image - gets an image from a text</li>
+            <li>imbd - sees a movie which is on imbd</li>
+            <li>perms - sees perms of a user</li>
+            <li>qr - creats a qr of a text</li>
+            <li>quickpoll - creats quickpoll in a server</li>
+            <li>sendembed - sends an embed</li>
+            <li>serverbanner - sees banner of the server</li>
+            <li>servericon - sees icon of the server</li>
+            <li>showmessage - shows message from anywhere with just message id</li>
+            <li>sourcebin - checks a code on sourcecode</li>
+            <li>splash - checks splash of a server</li>
+            <li>spotify - checks someone's spotify status</li>
+            <li>stats - checks stats of the bot</li>
+            <li>subreddit - checks a subreddit from bot</li>
+            <li>tiktok - gets tiktok information about a user</li>
+            <li>translate - translates a different language to a different one</li>
+            <li>instagram - gets information about a ig account</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>MODERATION</h2>
+        <ul>
+            <li>abolish - clears role from a user</li>
+            <li>addemoji - adds emoji in a server</li>
+            <li>ban- bans a user</li>
+            <li>bancount - sees how many users are banned in a server</li>
+            <li>banlist - sees users banned in a server</li>
+            <li>botclear - clears bot commands from the chat</li>
+            <li>clap - claps a sentence</li>
+            <li>findemoji - finds a emoji</Li>
+            <li>jail - jails a user</Li>
+            <li>jaillist - sees users which are jailed</Li>
+            <li>kick - kicks a user from a server</li>
+            <li>lock - locks a chat</Li>
+            <li>mute - mutes a user</li>
+            <li>nickname - chages nickname of a user</li>
+            <li>purge - purges or deletes messages from a server</li>
+            <li>role - assigns a role to a user</li>
+            <li>roleall - assigns everyone in a server with same role</li>
+            <li>roleicon - enlarges role icon</li>
+            <li>stealsticker - steals a sticker</li>
+            <li>unban - unbans a user</li>
+            <li>unbanall - unbans everyone from a guild</li>
+            <li>unjail - unjails someone who is alr jailed</li>
+            <li>unlock - unlocks a chat</li>
+            <li>unmute - unmutes a user</li>
+            <li>snipe - sees a deleted message</li>
+            <li>massdrag - massdrags users from one vc to another vc</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>FUN</h2>
+        <ul>
+            <li>8ball - ask 8ball</li>
+            <li>affect - avatar manipulation</li>
+            <li>beautiful - avatar manipulation</li>
+            <li>blur - avatar manipulation</li>
+            <li>circle - circles an avatar</li>
+            <li>dice - rolls a random number</li>
+            <li>facepalm - avatar manipulation</li>
+            <li>gay - avatar manipulation</li>
+            <li>invert - inverts color of an image</li>
+            <li>iq - shows iq rate</li>
+            <li>penis - shows penis size </li>
+            <li>rip - rip avatar manipulation</li>
+            <li>simp - shows simprate</li>
+            <li>youtube-together - creates a youtube together</li>
+            <li>clone - spoofs a message through webhook as someone else</li>
+            <li>randomnumber - shows a random number</li>
+            <li>randomenickname - randomizes a nickname</li>
+            <li>blacktea - have a blacktea gamee with users</li>
+            <li>kiss - kisses a user</li>
+            <li>hug - hugs a user</li>
+            <li>sex - haves sex with a user</li>
+            <li>boop - boops a user</li>
+            <li>greet - greets a user</li>
+            <li>handholding - holds hand with a user</li>
+            <li>highfive - highfives a user</li>
+            <li>kill - kills a user</li>
+            <li>pat - pats a user</li>
+            <li>slap - slaps a user</li>
+            <li>punch - punches a user</li>
+            <li>fight-videos - gets fight videos</li>
+            <li>rps - starts a game of rock papers in scissors</li>
+            <li>creatememe - creates a meme</li>
+            <li>memetemplates - shows the available templates</li>
+            <li>wideavatar - image manipulation command</li>
+            <li>ttt - starts a game of tictactoe</li>
+            <li>connect - connect4 on discord</li>
+            <li>ownership - sppof gives ownership to user</li>
+            <li>joke - sends a dad joke</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>MUSIC</h2>
+        <ul>
+            <li>autoplay - turns on autoplay</li>
+            <li>filter - filters out songs</li>
+            <li>grab - grabs a song in dms</li>
+            <li>loop - turns on loop mode</li>
+            <li>music - shows commands in music</li>
+            <li>play - plays a song into a vc</li>
+            <li>queue - sees the queue</li>
+            <li>skip - skips a song</li>
+            <li>stop - stops a song and leaves vc</li>
+            <li>volume - sets volume of a song</li>
+            <li>lastfm - lastfm commands</li>
+            <li>fm - shows activity on lastfm</li>
+        </ul>
+    </section>
+</body>
+</html>
