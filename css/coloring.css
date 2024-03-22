@@ -3,8 +3,8 @@
 	* this is primary color, applied on:
 	* background, underline
 	 */
-	--primary: #262626;
-	--primary-disabled: #292222;
+	--primary: #000000;
+	--primary-disabled: #000000;
 	/*
 	* this is secondary color, applied on:
 	* text, border
