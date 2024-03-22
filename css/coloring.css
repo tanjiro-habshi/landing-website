@@ -23,3 +23,6 @@
 	--o1: #00b2c9;
 	--o1-disabled: #008191;
 }
+body {
+    background-color: black; /* Override background color to black */
+}
