@@ -1,130 +1,172 @@
-<!DOCTYPE html><html><head>
-  <title>Port</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=0.7, minimal-ui, viewport-fit=cover, width=device-width">
-  <meta name="theme-color" content="#000001">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="port.rip">
-  <meta property="og:title" content="Port Bot">
-  <meta property="og:color" content="#000001">
-  <meta property="og:url" content="https://port.rip">
-  <meta property="og:description" content="Easy-to-use Multipurpose Discord Bot.">
-
-  <style>
-      @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Work+Sans:wght@100;400&display=swap");
-
-      @keyframes appear {
-          0% {
-              opacity: 0;
-          }
-      }
-
-      body {
-          animation: appear 3s;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          background: #000000; /* Set background color to black */
-          height: 100vh; /* Set full height */
-          margin: 0; /* Remove default margin */
-      }
-
-      .avatar {
-          width: 150px;
-          height: 150px;
-          border-radius: 50%; 
-          overflow: hidden;
-      }
-
-      .avatar img {
-          width: 100%; 
-          height: auto;
-      }
-
-      h1 {
-          font-family: Work Sans, sans-serif;
-          font-size: 15mm;
-          color: #92918f;
-          text-align: center;
-          margin-bottom: 5px;
-      }
-
-      h2 {
-          font-family: Work Sans, sans-serif;
-          font-size: 1.5em;
-          color: #4c5c6c;
-          text-align: center;
-          margin-bottom: 5px;
-      }
-
-      highlight {
-          color: #4c5c6c;
-      }
-
-      footer {
-          background-color: #2c3e50;
-          color: #fff;
-          font-family: Rubik, sans-serif;
-          text-align: center;
-          padding: 20px;
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-      }
-
-      .redirects {
-          text-align: center; 
-      }
-
-      ul.horz-list li {
-          display: inline;
-          padding: 2px;
-      }
-
-      ul.horz-list li a {
-          padding: 0.3em 1.2em;
-          border-radius: 8px;
-          color: white;
-          text-decoration: none;
-          font-family: Work Sans, sans-serif;
-          font-size: 6mm;
-          background-color: rgba(0, 0, 0, 0.2);
-          padding: 0.5em 1.5em;
-      }
-
-      ul.horz-list li a:hover {
-          color: #b8b8b8;
-          background-color: rgba(0, 0, 0, 0.3);
-      }
-
-      ul.horz-list {
-          margin: 0;
-          padding: 0;
-          list-style-type: none;
-          text-align: center;
-      }
-  </style>
-
-<link rel="icon" type="image/png" href="./img/logo.svg">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Port - Discord Bot</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Easy-to-use Multipurpose Discord Bot.">
+    <meta name="theme-color" content="#2b2d31">
+    <meta name="og:description" content="Easy-to-use Multipurpose Discord Bot.">
+    <meta property="og:title" content="Port">
+    <meta property="og:site_name" content="Port">
+    <link rel="icon" href="./img/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./port.io/_app/immutable/assets/app.CGJh0xym.css" rel="stylesheet">
+    <link href="./port.io/_app/immutable/assets/Toaster.CqNDpgoD.css" rel="stylesheet">
+    <link rel="modulepreload" href="./_app/immutable/entry/start.CuT0bMbl.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/scheduler.DqBFZT4M.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/index.6ecTL-ZO.js">
+    <link rel="modulepreload" href="./_app/immutable/entry/app.0YcQMFhe.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/index.C7dwt-hQ.js">
+    <link rel="modulepreload" href="./_app/immutable/nodes/0.DLztrs4N.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/spread.CgU5AtxT.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/each.CUbZXNsQ.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/Toaster.svelte_svelte_type_style_lang.BYHRLUxi.js">
+    <link rel="modulepreload" href="./_app/immutable/nodes/3.DBES7uc2.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/Header.BNO2yV2Y.js">
+    <link rel="modulepreload" href="./_app/immutable/chunks/index.d9lloBs4.js">
 </head>
+<body data-sveltekit-preload-data="hover" class="min-h-screen bg-background font-sans antialiased">
+    <div style="display: contents">
+        <div class="app">
+            <main class="min-h-[80vh]">
+                <header class="container top-0 z-40">
+                    <div class="flex h-20 items-center justify-between py-6">
+                        <div class="flex gap-6 md:gap-10" data-svelte-h="svelte-1qyx72">
+                            <a href="https://port.rip" class="flex items-center space-x-2">
+                                <span class="inline-block font-bold">PORT</span>
+                            </a>
+                            <nav class="flex gap-6">
+                                <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/tos">Tos</a>
+                                <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/commands">Commands</a>
+                                <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/discord">Support</a>
+                                <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://avatar.port.mom">Avatar History</a>
+                            </nav>
+                        </div>
+                        <nav>
+                            <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2" data-button-root="">
+                                <a href="https://discord.com/oauth2/authorize?client_id=785107195749597235&permissions=8&scope=bot">Add to Discord</a>
+                            </button>
+                        </nav>
+                    </div>
+                </header>
+                <div id="__saos-0.5641673125011946__" style="">
+                    <div style="animation: fade-in-bottom 0.25s cubic-bezier(0.35, 0.5, 0.65, 0.95) both; ">
+                        <section class="space-y-6 pb-8 pt-6 md:py-24 lg:py-16" data-svelte-h="svelte-116scjl">
+                            <div class="container flex max-w-[64rem] flex-col items-start gap-2 text-start md:items-center md:text-center">
+                                <h1 class="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">Port</h1>
+                                <p class="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">Easy-to-use Multipurpose Discord Bot, offering a versatile range of functions.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
+                <div id="__saos-0.435947410702366__" style="">
+                    <div style="animation: fade-in-bottom 0.25s cubic-bezier(0.35, 0.5, 0.65, 0.95) both; ">
+                        <section class="container space-y-6 bg-transparent py-8 md:py-12 lg:py-24" id="features">
+                            <div class="mx-auto flex max-w-[58rem] flex-col items-start text-start md:items-center md:space-y-4 md:text-center" data-svelte-h="svelte-yuq99z">
+                                <h2 class="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">Features</h2>
+                                <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">Port is a versatile Discord bot designed to streamline your server management and enhance your community's experience. While Port is free to use, it also offers an enticing selection of premium features to take your Discord server to the next level.</p>
+                            </div>
+                            <div class="mx-auto grid justify-center gap-4 md:max-w-[64rem] md:grid-cols-2">
+                                <div class="rounded-lg border bg-card text-card-foreground shadow-sm relative col-span-1 overflow-hidden p-2" aria-labelledby="card" aria-describedby="card" role="presentation" id="card">
+                                    <div class="flex h-[150px] flex-col justify-between rounded-md p-6">
+                                        <div class="flex flex-row items-center -space-x-4">
+                                            <img src="https://media.discordapp.net/attachments/1153995327460884480/1224122140245360770/aYEsGCW.png?ex=661c5795&is=6609e295&hm=ba58d6e0d25465082d8464d041705e6b68079c697832cc2161dbfb703adf264e&=&format=webp&quality=lossless" alt="Custom Image 1" class="h-11 w-11 border-2 border-card bg-card">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="font-bold">Configuration</h3>
+                                            <p class="text-sm text-muted-foreground">The Configuration module of Port empowers server administrators with comprehensive control over various bot settings and functionalities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg border bg-card text-card-foreground shadow-sm relative col-span-1 overflow-hidden p-2" aria-labelledby="card" aria-describedby="card" role="presentation" id="card">
+                                    <div class="flex h-[150px] flex-col justify-between rounded-md p-6">
+                                        <div class="flex flex-row items-center -space-x-4">
+                                            <img src="https://cdn.discordapp.com/attachments/1153995327460884480/1224122140656144415/jmeIbT8.png?ex=661c5795&is=6609e295&hm=675e9ccc14a572b11dfb2927b364559726c4f4192806afa359fc8d4efec276cf&" alt="Custom Image 1" class="h-11 w-11 border-2 border-card bg-card">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="font-bold">Moderation</h3>
+                                            <p class="text-sm text-muted-foreground">Port's Moderation module equips server moderators with powerful tools to maintain order, enforce rules, and uphold community standards effectively.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg border bg-card text-card-foreground shadow-sm relative col-span-1 overflow-hidden p-2" aria-labelledby="card" aria-describedby="card" role="presentation" id="card">
+                                    <div class="flex h-[150px] flex-col justify-between rounded-md p-6">
+                                        <div class="flex flex-row items-center -space-x-4">
+                                            <img src="https://cdn.discordapp.com/attachments/1153995327460884480/1224122141214244874/yLFdLFG.png?ex=661c5795&is=6609e295&hm=3baf5fbe2786c471ccdcfab525e33d15fb7756ea34a4988940be2da8147d8747&" alt="Custom Image 1" class="h-11 w-11 border-2 border-card bg-card">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="font-bold">Music</h3>
+                                            <p class="text-sm text-muted-foreground">Elevate the auditory experience of your Discord server with Port's Music, users can enjoy seamless access to a vast library of music from popular streaming platforms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg border bg-card text-card-foreground shadow-sm relative col-span-1 overflow-hidden p-2" aria-labelledby="card" aria-describedby="card" role="presentation" id="card">
+                                    <div class="flex h-[150px] flex-col justify-between rounded-md p-6">
+                                        <div class="flex flex-row items-center -space-x-4">
+                                            <img src="https://cdn.discordapp.com/attachments/1153995327460884480/1224122139846643782/7DH90eb.png?ex=661c5795&is=6609e295&hm=72d2c8dfd9f640fd1edd646798486fa2344fa0b220d9eba107c7b88a86d9ce46&" alt="Custom Image 1" class="h-11 w-11 border-2 border-card bg-card">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="font-bold">Fun</h3>
+                                            <p class="text-sm text-muted-foreground">With the Fun module, Port injects an extra dose of entertainment and amusement into Discord communities. Users can indulge in an array of interactive and engaging activities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-lg border bg-card text-card-foreground shadow-sm relative col-span-1 overflow-hidden p-2" aria-labelledby="card" aria-describedby="card" role="presentation" id="card">
+                                    <div class="flex h-[150px] flex-col justify-between rounded-md p-6">
+                                        <div class="flex flex-row items-center -space-x-4">
+                                            <img src="https://cdn.discordapp.com/attachments/1153995327460884480/1224129906779099166/MIf1VnY.png?ex=661c5ed1&is=6609e9d1&hm=6a5dd455dda0b7bb8152198cae52f22c6463c7da09f5c7ffca84e2d5113b2a97&" alt="Custom Image 1" class="h-11 w-11 border-2 border-card bg-card">
+                                                <!-- Add your SVG icon for Configuration here -->
+                                                <path fill="currentColor" d="M96 4C47.36 4 4 47.36 4 96s43.36 92 92 92s92-43.36 92-92S144.64 4 96 4zM53.92 96h36.16v36.16H53.92V96zm82.24 68.16H60.32V75.84H136.2v88.32z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <h3 class="font-bold">Utilities</h3>
+                                            <p class="text-sm text-muted-foreground">The Utilities module serves as a Swiss army knife of practical tools and utilities designed to streamline everyday tasks and enhance server functionality.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="container space-y-6 bg-transparent py-8 md:py-12 lg:py-24" id="statistics">
+                        <div class="mx-auto max-w-[58rem] text-muted-foreground text-center">
+                            <h2 class="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">Statistics</h2>
+                            <div class="flex justify-center items-center space-x-12"> <!-- Increased space-x to 12 -->
+                                <div class="flex flex-col items-center bg-gray-200 p-4 rounded-lg">
+                                    <p class="text-lg font-bold mb-4">Port is currently serving <span class="text-primary">100+</span> Servers, <span class="text-primary">100000+</span> Members with <span class="text-primary">250+</span> Commands.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>                    
+                </div>
+                <!-- Additional sections -->
+            </main>
+        </div>
+    </div>
+    <script type="5b659aec97418c098b04f492-text/javascript">
+        {
+            __sveltekit_1rwx8sd = {
+                base: new URL(".", location).pathname.slice(0, -1)
+            };
 
-<body>
-  <div class="avatar">
-      <img src="https://cdn.discordapp.com/attachments/1207228450067189761/1224032453887529120/kv37oF4.png?ex=661c040e&is=66098f0e&hm=7eda33d1e9a7b5d3a27912335495922e00a1396a8b08c184eb5c6ed2f75c5eec&" alt="Bot Avatar">
-  </div>
-  <h1>Port#8671</h1> <h2>Easy-to-use Multipurpose Discord Bot, offering a versatile range of functions.</h2>
-  <div class="redirects">
-      <ul class="horz-list">
-          <li><a href="https://port.rip/discord">Support</a></li>
-          <li><a href="https://port.rip/commands">Commands</a></li>
-          <li><a href="https://port.rip/tos">Terms of service</a></li>
-          <li><a href="https://avatar.port.mom">Avatar History</a></li>
+            const element = document.currentScript.parentElement;
 
-      </ul>
-  </div>
+            const data = [null, null];
 
-
-
-</body></html>
+            Promise.all([
+                import("./_app/immutable/entry/start.CuT0bMbl.js"),
+                import("./_app/immutable/entry/app.0YcQMFhe.js")
+            ]).then(([kit, app]) => {
+                kit.start(app, element, {
+                    node_ids: [0, 3],
+                    data,
+                    form: null,
+                    error: null
+                });
+            });
+        }
+    </script>
+    <script src="./port.io/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5b659aec97418c098b04f492-|49" defer=""></script>
+</body>
+</html>
