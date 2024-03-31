@@ -1,133 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html><head>
+  <title>Port</title>
   <meta charset="utf-8">
-  <title>Port - Discord Bot</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Add your favicon link here -->
-  <link rel="icon" type="image/png" href="./img/logo.svg">
+  <meta name="viewport" content="initial-scale=0.7, minimal-ui, viewport-fit=cover, width=device-width">
+  <meta name="theme-color" content="#000001">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="port.rip">
+  <meta property="og:title" content="Port Bot">
+  <meta property="og:color" content="#000001">
+  <meta property="og:url" content="https://port.rip">
+  <meta property="og:description" content="Easy-to-use Multipurpose Discord Bot.">
 
-  <!-- CSS styles (link to your stylesheets) -->
-  <link rel="stylesheet" type="text/css" href="./css/coloring.css">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <link rel="stylesheet" type="text/css" href="./css/txtformatting.css">
-  <link rel="stylesheet" type="text/css" href="./css/shadow.css">
-  <link rel="stylesheet" type="text/css" href="./css/loading.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Port - Discord Bot">
-  <meta property="og:description" content="Port is a versatile and dynamic Discord bot designed to enhance your server experience with a myriad of features.">
-  <meta property="og:url" content="https://port.rip"> 
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Work+Sans:wght@100;400&display=swap");
 
+      @keyframes appear {
+          0% {
+              opacity: 0;
+          }
+      }
+
+      body {
+          animation: appear 3s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: #000000; /* Set background color to black */
+          height: 100vh; /* Set full height */
+          margin: 0; /* Remove default margin */
+      }
+
+      .avatar {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%; 
+          overflow: hidden;
+      }
+
+      .avatar img {
+          width: 100%; 
+          height: auto;
+      }
+
+      h1 {
+          font-family: Work Sans, sans-serif;
+          font-size: 15mm;
+          color: #92918f;
+          text-align: center;
+          margin-bottom: 5px;
+      }
+
+      h2 {
+          font-family: Work Sans, sans-serif;
+          font-size: 1.5em;
+          color: #4c5c6c;
+          text-align: center;
+          margin-bottom: 5px;
+      }
+
+      highlight {
+          color: #4c5c6c;
+      }
+
+      footer {
+          background-color: #2c3e50;
+          color: #fff;
+          font-family: Rubik, sans-serif;
+          text-align: center;
+          padding: 20px;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+
+      .redirects {
+          text-align: center; 
+      }
+
+      ul.horz-list li {
+          display: inline;
+          padding: 2px;
+      }
+
+      ul.horz-list li a {
+          padding: 0.3em 1.2em;
+          border-radius: 8px;
+          color: white;
+          text-decoration: none;
+          font-family: Work Sans, sans-serif;
+          font-size: 6mm;
+          background-color: rgba(0, 0, 0, 0.2);
+          padding: 0.5em 1.5em;
+      }
+
+      ul.horz-list li a:hover {
+          color: #b8b8b8;
+          background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      ul.horz-list {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          text-align: center;
+      }
+  </style>
+
+<link rel="icon" type="image/png" href="./img/logo.svg">
 </head>
-<body class="on">
-  <div class="loading" id="loading-box">
-    <div class="loading-item"><div class="loading-progress"></div></div>
+
+<body>
+  <div class="avatar">
+      <img src="https://cdn.discordapp.com/attachments/1207228450067189761/1224032453887529120/kv37oF4.png?ex=661c040e&is=66098f0e&hm=7eda33d1e9a7b5d3a27912335495922e00a1396a8b08c184eb5c6ed2f75c5eec&" alt="Bot Avatar">
   </div>
-  <main class="main">
-    <!-- navbar -->
-    <div class="navbar">
-      <div class="container">
-        <div class="navbar-nav">
-          <div class="navbar-brand">
-            <!-- You can change it with Image if you want. -->
-            <span class="navbar-brand-txt"><a class="txt-bold type-1" href="https://port.rip/">Port</a></span>
-          </div>
+  <h1>Port#8671</h1> <h2>Easy-to-use Multipurpose Discord Bot, offering a versatile range of functions.</h2>
+  <div class="redirects">
+      <ul class="horz-list">
+          <li><a href="https://port.rip/discord">Support</a></li>
+          <li><a href="https://port.rip/commands">Commands</a></li>
+          <li><a href="https://port.rip/tos">Terms of service</a></li>
+          <li><a href="https://avatar.port.mom">Avatar History</a></li>
 
-          <span class="navbar-toggler" id="toggler"><i onclick="toggleNavbar(this)" class="fas fa-bars"></i></span>
-
-          <div class="navs" id="navs">
-            <!-- You can change the href value and the text value -->
-            <div class="navs-item notbtn"><a href="https://port.rip/commands" class="txt-uppercase">Commands</a></div>
-            <div class="navs-item notbtn"><a href="https://port.rip/discord" class="txt-uppercase">Support</a></div>
-            <div class="navs-item notbtn"><a href="https://port.rip/tos" class="txt-uppercase">Terms of service</a></div>
-            <div class="navs-item notbtn"><a href="https://avatar.port.mom" class="txt-uppercase">Avatar History</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- navbar end -->		
-    <!-- jumbotron -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class="jumbotron-items">
-          <div class="jumbotron-item">
-            <span class="jumbotron-t">Why Port?</span>
-            <p class="jumbotron-d">Port is a versatile and dynamic Discord bot designed to enhance your server experience with a myriad of features. From moderating conversations and managing members to providing engaging entertainment, Port seamlessly navigates through diverse functionalities.</p>
-            <div class="jumbotron-buttons">
-              <button class="btn" onclick="location.href='#features'">Features</button>
-              <button class="btn blue" onclick="location.href='https://discord.com/oauth2/authorize?client_id=785107195749597235&permissions=8&scope=bot'">Invite</button>
-            </div>
-          </div>
-          <div class="jumbotron-item">
-            <img src="./img/img.svg" alt="image"> 
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- jumbotron end -->
-    <span class="scroll-down"><i class="fas fa-arrow-down"></i></span>
-  </main>
-
-  <!-- features -->
-  <div class="features-box">
-    <h1 class="features-t" id="features">We are provide the best.</h1>
-    <div class="container">
-      <div class="features">
-        <div class="feature">
-          <img class="feature-img" src="./img/feature1.png"></img>
-          <div class="feature-info">
-            <h2 class="feature-info-t">Moderation</h2>
-            <p class="feature-info-d">Ensure a well-maintained server with Port's moderation features. Kick, ban, mute, and clear commands provide powerful tools for managing user behavior and maintaining a positive community environment.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <img class="feature-img" src="./img/feature2.png"></img>
-          <div class="feature-info">
-            <h2 class="feature-info-t">Informational Insights</h2>
-            <p class="feature-info-d">Access valuable insights about your server with information commands. Retrieve details about the server itself, explore user profiles with userinfo, and understand channel specifics with channelinfo for a comprehensive overview.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <img class="feature-img" src="./img/feature4.png"></img>
-          <div class="feature-info">
-            <h2 class="feature-info-t">Fun</h2>
-            <p class="feature-info-d">Bring joy and entertainment to your server with fun commands. Ask the magic 8-ball for guidance, start trivia games, enjoy random memes, and engage in a virtual coin flip for lighthearted amusement.</p>
-          </div>
-        </div>
-          <div class="feature">
-            <img class="feature-img" src="./img/feature3.png"></img>
-            <div class="feature-info">
-              <h2 class="feature-info-t">Music Playback</h2>
-              <p class="feature-info-d">Transform your server into a musical haven with Port's music commands. Play songs from YouTube or other sources, skip tracks, and control playback seamlessly with play, skip, pause, and resume commands.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </ul>
   </div>
-  <!-- features end -->
 
-  <!-- services -->
-  <div class="services-box">
-    <h1 class="services-t" id="services">Port is currently serving</h1>
-    <div class="container">
-      <div class="services">
-        <div class="service">
-          <span><i class="fas fa-server"></i> 100+ servers</span>
-        </div>
-        <div class="service">
-          <span><i class="fas fa-users"></i> 50000+ users</span>
-        </div>
-        <div class="service">
-          <span><i class="fas fa-gear"></i> 200+ commands</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- services end -->
-  <script type="text/javascript" src="./js/script.js"></script>
-  <script type="text/javascript" src="./js/cursor.js"></script>
-</body>
-</html>
+
+
+</body></html>
