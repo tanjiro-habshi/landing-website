@@ -1,111 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<!DOCTYPE html><html lang="en"><head>
+  <title>Port - Commands</title>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#2b2d31">
+  <meta name="og:description" content="Easy-to-use Multipurpose Discord Bot.">
+  <meta property="og:title" content="Port Bot">
+  <link rel="icon" type="image/png" href="./img/logo.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/0.DjftVINd.css" rel="stylesheet">
+  <link href="css/app.BoxqSBdf.css" rel="stylesheet">
+  <link href="css/Toaster.CqNDpgoD.css" rel="stylesheet">
   <style>
     section {
       margin-bottom: 20px;
     }
-  
+
     h2 {
-      color: #63a2cc;
-      margin-bottom: 20px; /* Adjust the margin as needed */
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
-  
+
     ul {
       list-style-type: none;
       padding: 0;
     }
-  
+
     li {
-      margin-bottom: 5px;
-      font-family: 'Arial', sans-serif; /* Adjust the font as needed */
+      margin-bottom: 10px; 
+      font-family: 'Arial', sans-serif;
       position: relative;
-      padding-left: 20px; /* Adjust the space between bullet and text */
+      padding-left: 20px;
     }
-  
+
     li::before {
-      content: '\2022'; /* Unicode character for bullet point */
-      color: #63a2cc; /* Adjust the color of the bullet point */
+      content: '\2022';
+      color: #63a2cc;
       position: absolute;
       left: 0;
     }
-  </style>  
-  
-  <meta charset="utf-8">
-  <title>Port - Terms of service</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Add your favicon link here -->
-  <link rel="icon" type="image/png" href="./img/logo.svg">
-
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="./css/coloring.css">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <link rel="stylesheet" type="text/css" href="./css/txtformatting.css">
-  <link rel="stylesheet" type="text/css" href="./css/shadow.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <div class="container">
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="container">
-        <div class="navbar-nav">
-          <div class="navbar-brand">
-            <span class="navbar-brand-txt"><a class="txt-bold type-1" href="https://port.rip/">Port</a></span>
-          </div>
-          <span class="navbar-toggler" id="toggler"><i onclick="toggleNavbar(this)" class="fas fa-bars"></i></span>
-          <div class="navs" id="navs">
-            <div class="navs-item notbtn"><a href="https://port.rip/commands" class="txt-uppercase">Commands</a></div>
-            <div class="navs-item notbtn"><a href="https://port.rip/discord" class="txt-uppercase">Support</a></div>
-            <div class="navs-item notbtn"><a href="https://discord.com/oauth2/authorize?client_id=785107195749597235&permissions=8&scope=bot" class="txt-uppercase">Invite</a></div>
-            <div class="navs-item notbtn"><a href="https://avatar.port.mom" class="txt-uppercase">Avatar History</a></div>
-          </div>
-        </div>
+  </style>
+  </head>
+<header class="container top-0 z-40">
+    <div class="flex h-20 items-center justify-between py-6">
+      <div class="flex gap-6 md:gap-10" data-svelte-h="svelte-1qyx72">
+        <a href="/" class="flex items-center space-x-2"><span class="inline-block font-bold">Port</span></a>
+        <nav class="flex gap-6">
+          <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/commands">Commands</a>
+          <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/discord">Support</a>
+          <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://avatar.port.mom">Avatar History</a>
+        </nav>
       </div>
+      <nav>
+        <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2" data-button-root="">
+          <a href="https://discord.com/oauth2/authorize?client_id=785107195749597235&permissions=8&scope=bot">Add to Discord</a>
+      </button>
+      </nav>
     </div>
-    <!-- Navbar end -->
+  </header>
+  <h1 class="py-8 text-center text-3xl font-bold md:text-4xl lg:text-5xl" data-svelte-h="svelte-1f9tqxv">Terms of Service</h1>
+
+  <body>
     <div class="container">
-    <section>
-        <h2>WHAT DATA DO WE STORE?</h2>
-        <ul>
-            <li>We prioritize the protection of user privacy and do not collect any personal information such as passwords or other credentials. The data we do collect comprises User IDs, Server IDs, Channel IDs, and select Role IDs. It's crucial to note that our bot never solicits personal data from users, and we actively discourage any actions that contravene Discord's Terms of Service.</li>
-        </ul>
-    </section>
+      <section>
+          <h2>WHAT DATA DO WE STORE?</h2>
+          <ul>
+              <li>We prioritize the protection of user privacy and do not collect any personal information such as passwords or other credentials. The data we do collect comprises User IDs, Server IDs, Channel IDs, and select Role IDs. It's crucial to note that our bot never solicits personal data from users, and we actively discourage any actions that contravene Discord's Terms of Service.</li>
+          </ul>
+      </section>
+  
+      <section>
+          <h2>WHY WE NEED THIS DATA?</h2>
+          <ul>
+              <li>The data is required for the proper functioning of the bot features like Warning System, Logging and Autoroles. Without this data, our bot will not be able to perform these activities and thus making the features inaccessible for users</li>
+          </ul>
+      </section>
+  
+      <section>
+          <h2>HOW DO WE USE THIS DATA?</h2>
+          <ul>
+              <li>The data is used for the proper functioning for the Warning System, Logging activities and Autorole features of our Bot. User IDs are used to identify the users, Channel IDs are used to send the messages to the desginated channels and Server IDs to identify the Servers and the Role IDs are used for the Autorole feature</li>
+          </ul>
+      </section>
+  
+      <section>
+          <h2>HOW LONG DO WE STORE YOUR DATA?</h2>
+          <ul>
+              <li>The data is stored as long as the bot is in your Server and as soon as the bot is kicked or removed from the Server, the data is deleted and is no longer to accessable to anyone</li>
+          </ul>
+      </section>
+  
+      <section>
+          <h2>WHO DO WE SHARE THE DATA WITH?</h2>
+          <ul>
+              <li>We never share your data with anyone except for MongoDB Inc whom is a DataBase Company and all the data for our Bot is stored on the MongoDB Servers and According to MongoDB Inc. the data is only accessable by us.</li>
+          </ul>
+      </section>
+      
+      <section>
+          <h2>GOT CONCERNS OR QUERIES?</h2>
+          <ul>
+              <li>If you have any concerns or queries relating our privacy policy or our bot or if you want your data to be removed, You can contact tanjiro_habshi directy on our Support Server!</li>
+          </ul>
+          <section class="container space-y-6 bg-transparent py-8 md:py-12 lg:py-24" id="statistics">
+            <div class="mx-auto max-w-[58rem] text-muted-foreground text-center">
+                <div class="flex justify-center items-center space-x-12">
+                    <div class="flex flex-col items-center bg-gray-200 p-4 rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+  </body>
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const questionButtons = document.querySelectorAll('.question-button');
+            questionButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const answer = this.parentElement.nextElementSibling.querySelector('.answer');
+                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+    <script src="./js/rocket-loader.min.js" data-cf-settings="41cb587561a32b7885355324-|49" defer=""></script>
+  </body>
 
-    <section>
-        <h2>WHY WE NEED THIS DATA?</h2>
-        <ul>
-            <li>The data is required for the proper functioning of the bot features like Warning System, Logging and Autoroles. Without this data, our bot will not be able to perform these activities and thus making the features inaccessible for users</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>HOW DO WE USE THIS DATA?</h2>
-        <ul>
-            <li>The data is used for the proper functioning for the Warning System, Logging activities and Autorole features of our Bot. User IDs are used to identify the users, Channel IDs are used to send the messages to the desginated channels and Server IDs to identify the Servers and the Role IDs are used for the Autorole feature</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>HOW LONG DO WE STORE YOUR DATA?</h2>
-        <ul>
-            <li>The data is stored as long as the bot is in your Server and as soon as the bot is kicked or removed from the Server, the data is deleted and is no longer to accessable to anyone</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>WHO DO WE SHARE THE DATA WITH?</h2>
-        <ul>
-            <li>We never share your data with anyone except for MongoDB Inc whom is a DataBase Company and all the data for our Bot is stored on the MongoDB Servers and According to MongoDB Inc. the data is only accessable by us.</li>
-        </ul>
-    </section>
-    
-    <section>
-        <h2>GOT CONCERNS OR QUERIES?</h2>
-        <ul>
-            <li>If you have any concerns or queries relating our privacy policy or our bot or if you want your data to be removed, You can contact tanjiro_habshi directy on our Support Server!</li>
-        </ul>
-    </section>
-</body>
 </html>
