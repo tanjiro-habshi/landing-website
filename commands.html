@@ -2,591 +2,3009 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-  section {
-    margin-bottom: 20px;
-  }
-
-  h2 {
-    color: #63a2cc;
-    margin-bottom: 20px; /* Adjust the margin as needed */
-    font-size: 24px; /* Increase the font size */
-    text-align: center; /* Center the text */
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    margin-bottom: 5px;
-    font-family: 'Arial', sans-serif; /* Adjust the font as needed */
-    position: relative;
-    padding-left: 20px; /* Adjust the space between bullet and text */
-  }
-
-  li::before {
-    color: #63a2cc; /* Adjust the color of the bullet point */
-    position: absolute;
-    left: 0;
-  }
-  </style>
   <meta charset="utf-8">
   <title>Port - Commands</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Add your favicon link here -->
   <link rel="icon" type="image/png" href="./img/logo.svg">
-
-  <!-- CSS -->
+  <style>
+    .accordion-flush {
+      background-color: black;
+      color: white; 
+    }
+    .command-name {
+      color: black;
+      background-color: black; 
+    }
+    .command-description {
+      color: white;
+      background-color: black; 
+    }
+    .accordion-button {
+      background-color: black;
+      color: white;
+    }
+    .accordion-body {
+      background-color: black;
+    }
+    h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/untitled.css" rel="stylesheet">
   <link href="css/j0LNibUk6l9h.css" rel="stylesheet">
   <link href="css/QQdpRMbZlAol.css" rel="stylesheet">
   <link href="css/TwWjjFCR73kD.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-</div>
-<main class="main">
-  <header class="container top-0 z-40">
-  <div class="flex h-20 items-center justify-between py-6">
-    <div class="flex gap-6 md:gap-10" data-svelte-h="svelte-1qyx72">
-        <a href="https://port.rip" class="flex items-center space-x-2">
-                        <img src="https://cdn.discordapp.com/attachments/1207228450067189761/1224791310737608928/1VgJG6D.png?ex=661ec6cc&is=660c51cc&hm=3387fc9f8062836c8e141f0f0cb75e678c44b54186e49a5f9cbe38fdf88d8157&" alt="Custom Image 1" class="h-11 w-11 border-2 border-card bg-card">
-        </a>
-        <nav class="flex gap-6">
-            <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/tos">Tos</a>
-            <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/discord">Support</a>
-            <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://avatar.port.mom">Avatar History</a>
-        </nav>
-    </div>
-    <nav>
-        <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2" data-button-root="">
-            <a href="https://discord.com/oauth2/authorize?client_id=785107195749597235&permissions=8&scope=bot">Add to Discord</a>
-        </button>
-    </nav>
-  </header>
-
 <body>
 
-<section>
-<h2>config</h2>
-<ul>
-
-  <li>announce<span class="description"> - Make an Announcement in your Server</span></li>
-
-  <li>antibot<span class="description"> - Enable/disable Anti-bot feature!</span></li>
-
-  <li>antieveryone<span class="description"> - Setup Anti everyone per server and manage whitelist!</span></li>
-
-  <li>antilink<span class="description"> - Setup antilink per server!</span></li>
-
-  <li>antinuke<span class="description"> - set up a configurable antinuke which will prevent unauthorized bans/kicks/channel creations/etc</span></li>
-
-  <li>antiraid<span class="description"> - enabling antiraid will prevent users from joining the server</span></li>
-
-  <li>antiwords<span class="description"> - Setup antiwords per server!
-This blocks every slang/word in Discord API that is flagged as antiword!</span></li>
-
-  <li>autoanime<span class="description"> - sets up a channel to send anime pics randomly</span></li>
-
-  <li>autobanner<span class="description"> - sets up a channel to send banners randomly</span></li>
-
-  <li>autopfp<span class="description"> - sets up a channel to pfps randomly</span></li>
-
-  <li>autoreact<span class="description"> - Setup auto reactions per server!</span></li>
-
-  <li>autoresponse<span class="description"> - Create a autoresponder to respond to triggers automatically</span></li>
-
-  <li>autorole<span class="description"> - Set up a join role to give a role to new users</span></li>
-
-  <li>autosetup<span class="description"> - Create auto-posting channels</span></li>
-
-  <li>autowallpaper<span class="description"> - sets up a channel to send wallpapers randomly</span></li>
-
-  <li>boost<span class="description"> - set up boost messages</span></li>
-
-  <li>customcommand<span class="description"> - create your own commands for your server</span></li>
-
-  <li>editembed<span class="description"> - Edit an embed</span></li>
-
-  <li>setperms<span class="description"> - sets perms in everyone role</span></li>
-
-  <li>joindm<span class="description"> - set up a message to send to users privately on join</span></li>
-
-  <li>messagelog<span class="description"> - sends deleted messages to a channel</span></li>
-
-  <li>nuke<span class="description"> - Nukes the channel and recreates a clone</span></li>
-
-  <li>pingonjoin<span class="description"> - Set up ping messages upon user join.</span></li>
-
-  <li>prefix<span class="description"> - configure settings for the bot prefix in a server</span></li>
-
-  <li>reactionrole-setup<span class="description"> - setup reactionroles</span></li>
-
-  <li>resetroleicon<span class="description"> - reset the icon of a role</span></li>
-
-  <li>sendinv<span class="description"> - send a button with a link to an embed</span></li>
-
-  <li>seticon<span class="description"> - set the icon of the server</span></li>
-
-  <li>setbanner<span class="description"> - set the banner of the server</span></li>
-
-  <li>setservername<span class="description"> - Set a new server name</span></li>
-
-  <li>setsplash<span class="description"> - change the server invite background</span></li>
-
-  <li>skullboard<span class="description"> - Set up or remove a message to be sent to a specific channel upon reaching a certain number of reactions.</span></li>
-
-  <li>testwelcome<span class="description"> - testwelcome members</span></li>
-
-  <li>webhook<span class="description"> - send content through webhooks</span></li>
-
-  <li>welcome<span class="description"> - setup welcome messages</span></li>
-
-</ul>
-</section>
-
-<section>
-<h2>music</h2>
-<ul>
-
-  <li>autoplay<span class="description"> - Stop the bot from playing a random song.</span></li>
-
-  <li>filter<span class="description"> - Set Music Filter</span></li>
-
-  <li>fm<span class="description"> - Shows all last.fm commands</span></li>
-
-  <li>fmalbum<span class="description"> - Get information about a specific album.</span></li>
-
-  <li>fmartist<span class="description"> - Get information about a specific artist.</span></li>
-
-  <li>fmchart<span class="description"> - Get FM Chart.</span></li>
-
-  <li>fmrecent<span class="description"> - Show the most recent tracks scrobbled by a user.</span></li>
-
-  <li>fmsimilar<span class="description"> - Get similar artists to a specified artist.</span></li>
-
-  <li>fmtrack<span class="description"> - Get information about a specific track.</span></li>
-
-  <li>grab<span class="description"> - Show current song</span></li>
-
-  <li>lastfm<span class="description"> - Shows all last.fm commands</span></li>
-
-  <li>loop<span class="description"> - Loops / Repeat the Music</span></li>
-
-  <li>pause<span class="description"> - Pause the currently playing song</span></li>
-
-  <li>play<span class="description"> - Play some music.</span></li>
-
-  <li>queue<span class="description"> - Show the current queue.</span></li>
-
-  <li>resume<span class="description"> - Resume the currently paused song</span></li>
-
-  <li>skip<span class="description"> - Skip the current music.</span></li>
-
-  <li>stop<span class="description"> - Stop the music player.</span></li>
-
-  <li>volume<span class="description"> - Change the music player's volume.</span></li>
-
-</ul>
-</section>
-
-<section>
-<h2>fun</h2>
-<ul>
-
-  <li>8ball<span class="description"> - asks a message from 8ball</span></li>
-
-  <li>affect<span class="description"> - manipulates user avatar</span></li>
-
-  <li>beautiful<span class="description"> - manipulates user avatar</span></li>
-
-  <li>blacktea<span class="description"> - You have 10 seconds to say a word containing the given group of 3 letters. Failure to do so within the 10 seconds will lose a life.</span></li>
-
-  <li>blur<span class="description"> - manipulates user avatar</span></li>
-
-  <li>boop<span class="description"> - boops a user</span></li>
-
-  <li>circle<span class="description"> - manipulates user avatar</span></li>
-
-  <li>clap<span class="description"> - it just claps words lmao</span></li>
-
-  <li>clone<span class="description"> - Makes a webhook to impersonate someone</span></li>
-
-  <li>connect4<span class="description"> - connect4 in discord!</span></li>
-
-  <li>creatememe<span class="description"> - Create Custom Memes</span></li>
-
-  <li>roll<span class="description"> - Roll a die for you!!</span></li>
-
-  <li>facepalm<span class="description"> - manipulates user avatar</span></li>
-
-  <li>gay<span class="description"> - manipulates user avatar</span></li>
-
-  <li>gayrate<span class="description"> - shows gayrate of a user</span></li>
-
-  <li>greet<span class="description"> - greets a user</span></li>
-
-  <li>hack<span class="description"> - spoofs hacks a user</span></li>
-
-  <li>handholding<span class="description"> - handholds a user</span></li>
-
-  <li>highfive<span class="description"> - highfives a user</span></li>
-
-  <li>hug<span class="description"> - hugs a user</span></li>
-
-  <li>invert<span class="description"> - manipulates user avatar</span></li>
-
-  <li>iq<span class="description"> - iq rates user</span></li>
-
-  <li>kill<span class="description"> - kills a user</span></li>
-
-  <li>kiss<span class="description"> - kisses a user</span></li>
-
-  <li>memetemplates<span class="description"> - Get all the available meme templates</span></li>
-
-  <li>ownership<span class="description"> - transfers owner to another user as a spoof</span></li>
-
-  <li>pat<span class="description"> - pats a user</span></li>
-
-  <li>penis<span class="description"> - penis rates user</span></li>
-
-  <li>pp<span class="description"> - tells you or a users pp size</span></li>
-
-  <li>punch<span class="description"> - punches a user (nibras asked me to create punch command)</span></li>
-
-  <li>randomcat<span class="description"> - Sends a random cat picture.</span></li>
-
-  <li>randomdog<span class="description"> - Sends a random dog picture.</span></li>
-
-  <li>randomfox<span class="description"> - Sends a random fox picture.</span></li>
-
-  <li>randomnickname<span class="description"> - Gives you a randomized nickname</span></li>
-
-  <li>rip<span class="description"> - manipulates user avatar</span></li>
-
-  <li>rps<span class="description"> - haves a match of RockPaperScissors with a user</span></li>
-
-  <li>sex<span class="description"> - haves sex with a user</span></li>
-
-  <li>simprate<span class="description"> - simprate rates user</span></li>
-
-  <li>slap<span class="description"> - slaps a user</span></li>
-
-  <li>trivia<span class="description"> - Sends a random trivia question with multiple-choice options.</span></li>
-
-  <li>ttt<span class="description"> - Tic Tac Toe in discord!</span></li>
-
-  <li>wide<span class="description"> - widens an avatar</span></li>
-
-  <li>youtubetogether<span class="description"> - Watch Youtube in Discord Voice Channel</span></li>
-
-</ul>
-</section>
-
-<section>
-<h2>information</h2>
-<ul>
-
-  <li>avatarhistory<span class="description"> - This command likely retrieves the historical avatars (profile pictures) of a user within a Discord server.</span></li>
-
-  <li>boostcount<span class="description"> -  It shows the number of boosts a Discord server has received. Boosting a server is a feature in Discord where users can support a server with additional benefits.</span></li>
-
-  <li>botinfo<span class="description"> - Displays information about the Discord bot such as its version, creator, and possibly statistics about its usage</span></li>
-
-  <li>botinvite<span class="description"> - Provides an invite link for adding the bot to a Discord server.</span></li>
-
-  <li>serverbots<span class="description"> -  Lists the bots present in the Discord server.</span></li>
-
-  <li>commandsused<span class="description"> - view the amount of commands you used</span></li>
-
-  <li>credits<span class="description"> - Displays information about who developed and contributed to the Discord bot.</span></li>
-
-  <li>donate<span class="description"> - Provides information or a link for users to donate to support the development and maintenance of the bot.</span></li>
-
-  <li>embedbuilder<span class="description"> - A command used to create rich embeds for messages in Discord.</span></li>
-
-  <li>emojiinformation<span class="description"> - Get data about the given emoji.</span></li>
-
-  <li>emojilist<span class="description"> - Lists all the emojis available in the server.</span></li>
-
-  <li>help<span class="description"> - Displays a list of available commands or provides help information on how to use specific commands.</span></li>
-
-  <li>inrole<span class="description"> - Views users in a specific role</span></li>
-
-  <li>invite<span class="description"> - Get Links To Invite Me :D</span></li>
-
-  <li>invites<span class="description"> - Shows Users Joined Through Someone's Invites</span></li>
-
-  <li>leaderboard<span class="description"> - View the leaderboard of users with the most messages</span></li>
-
-  <li>membercount<span class="description"> - Displays the current number of members in the Discord server.</span></li>
-
-  <li>messages<span class="description"> - view the amount of messages a user has</span></li>
-
-  <li>names<span class="description"> - Show all names you have had</span></li>
-
-  <li>oldest<span class="description"> - Diplays the oldest account in the server</span></li>
-
-  <li>ping<span class="description"> -  Checks the response time of the Discord bot.</span></li>
-
-  <li>recentemojis<span class="description"></span></li>
-
-  <li>roleinfo<span class="description"> - Provides information about a specific role in the Discord server.</span></li>
-
-  <li>roles<span class="description"> - Lists all the roles available in the Discord server.</span></li>
-
-  <li>serverinfo<span class="description"> - Displays general information about the Discord server.</span></li>
-
-  <li>stickerinfo<span class="description"> - Retrieves information about a specific sticker in the server.</span></li>
-
-  <li>support<span class="description"> - get a link to the support server</span></li>
-
-  <li>tos<span class="description"> - Gets tos of discord bot `port`</span></li>
-
-  <li>update<span class="description"> - bug report command</span></li>
-
-  <li>uptime<span class="description"> - Shows how long the bot have been online</span></li>
-
-  <li>userinfo<span class="description"> - Get info about your account or mentioned user's account!</span></li>
-
-  <li>vanityjoins<span class="description"> - returns vanity link and uses</span></li>
-
-  <li>youngest<span class="description"> - Diplays the youngest account in the server</span></li>
-
-</ul>
-</section>
-
-<section>
-<h2>moderation</h2>
-<ul>
-
-  <li>abolish<span class="description"> - Remove all roles from a user</span></li>
-
-  <li>auditlogs<span class="description"> - Displays the last actions taken in the server's audit logs</span></li>
-
-  <li>ban<span class="description"> - Ban anyone from a server</span></li>
-
-  <li>bancount<span class="description"> - shows the amount of users banner in a server</span></li>
-
-  <li>botclear<span class="description"> - purge messages from bots</span></li>
-
-  <li>clear<span class="description"> - clears messages</span></li>
-
-  <li>clearsnipe<span class="description"> - Clear the latest sniped message.</span></li>
-
-  <li>copyembed<span class="description"> - copies a embed</span></li>
-
-  <li>editsnipe<span class="description"> - snipes an edited message.</span></li>
-
-  <li>findemoji<span class="description"> - searches through emojis from a random api</span></li>
-
-  <li>hardban<span class="description"> - Ban and remove a user from the server</span></li>
-
-  <li>hideall<span class="description"> - hides all channels</span></li>
-
-  <li>imagemute<span class="description"> - Prevents a user from sending embed links and attachments in the server.</span></li>
-
-  <li>imageunmute<span class="description"> - Allows a previously muted user to send embed links and attachments in the server.</span></li>
-
-  <li>jail<span class="description"> - jails the specified member (sets up upon first use)</span></li>
-
-  <li>jailed<span class="description"> - shows number of people jailed</span></li>
-
-  <li>kick<span class="description"> - Kick a user from the server</span></li>
-
-  <li>lock<span class="description"> - locks a specific channel</span></li>
-
-  <li>lockall<span class="description"> - locks all channels</span></li>
-
-  <li>massdrag<span class="description"> - Mass drags people from a voice channel.</span></li>
-
-  <li>mute<span class="description"> - Mutes the specified user</span></li>
-
-  <li>nickname<span class="description"> - Sets Or Changes Nickname Of An User</span></li>
-
-  <li>prune<span class="description"> - Kick inactive users who have been inactive for 30 days or more from the server.</span></li>
-
-  <li>purge<span class="description"> - Deletes messages from a channel</span></li>
-
-  <li>reactionsnipe<span class="description"> - Snipes a reaction on the last message.</span></li>
-
-  <li>reinvite<span class="description"> - Send an invite link to a previously banned user.</span></li>
-
-  <li>role<span class="description"> - Add or remove a role to a user</span></li>
-
-  <li>roleall<span class="description"> - Add or remove a role to everyone</span></li>
-
-  <li>roleicon<span class="description"> - Shows or sets an icon for a role</span></li>
-
-  <li>slowmode<span class="description"> - Set slowmode in the channel</span></li>
-
-  <li>snipe<span class="description"> - Snipe a recently deleted message</span></li>
-
-  <li>softban<span class="description"> - Softban a user from the server</span></li>
-
-  <li>stealall<span class="description"> - Add Multiple Emojis at once</span></li>
-
-  <li>cloneembed<span class="description"> - clone a embed from the channel server</span></li>
-
-  <li>stealsticker<span class="description"> - Steals a sticker and adds it to the server quickly</span></li>
-
-  <li>timeout<span class="description"> - Timeout the specified user</span></li>
-
-  <li>unban<span class="description"> - Unbans a banned user</span></li>
-
-  <li>unbanall<span class="description"> - unban all banned users</span></li>
-
-  <li>unhideall<span class="description"> - unhides all channels</span></li>
-
-  <li>unjail<span class="description"> - Unjail the specified user.</span></li>
-
-  <li>unlock<span class="description"> - unlocks channel</span></li>
-
-  <li>unlockall<span class="description"> - unlocks all channels</span></li>
-
-  <li>unmute<span class="description"> - unmutes a specified user</span></li>
-
-  <li>untimeout<span class="description"> - Remove timeout from the specified user</span></li>
-
-  <li>userlogs<span class="description"> - Displays the last actions taken by a specific user in the server's audit logs</span></li>
-
-  <li>voice<span class="description"> - shows moderation commands related to voice</span></li>
-
-</ul>
-</section>
-
-<section>
-<h2>utilities</h2>
-<ul>
-
-  <li>afk<span class="description"> - sets up afk in a server</span></li>
-
-  <li>aiimage<span class="description"> - generates ai generated images</span></li>
-
-  <li>animesearch<span class="description"> - Get info about an anime</span></li>
-
-  <li>avatar<span class="description"> - View a user's avatar</span></li>
-
-  <li>banner<span class="description"> - shows banner of a user</span></li>
-
-  <li>calculator<span class="description"> - opens calculator in discord.</span></li>
-
-  <li>color<span class="description"> - shows a color through a color code</span></li>
-
-  <li>crypto<span class="description"> - check specific crypto currencies value</span></li>
-
-  <li>define<span class="description"> - Give information about urban words!</span></li>
-
-  <li>simpleembed<span class="description"> - admin only make embed command</span></li>
-
-  <li>enlarge<span class="description"> - Converting Server emoji to PNG/GIF!</span></li>
-
-  <li>firstmessage<span class="description"> - Returns first message of that channel</span></li>
-
-  <li>github<span class="description"> - view information on a github account</span></li>
-
-  <li>image<span class="description"> - Fetch images from Google</span></li>
-
-  <li>imbd<span class="description"> - Get the information about series and movie</span></li>
-
-  <li>instagram<span class="description"> - Find out some nice Instagram statistics</span></li>
-
-  <li>ipinfo<span class="description"> - Get detailed information on a public IP address</span></li>
-
-  <li>ocr<span class="description"> - Read text from an image using OCR</span></li>
-
-  <li>permisssions<span class="description"> - List the server permissions of mentioned user or provided ID</span></li>
-
-  <li>pinterest<span class="description"> - shows pictures from pinterest</span></li>
-
-  <li>playstation<span class="description"> - Get information on a PlayStation profile</span></li>
-
-  <li>presence<span class="description"> - Shows specified users presence</span></li>
-
-  <li>qr<span class="description"> - Reads or makes a qr</span></li>
-
-  <li>quickpoll<span class="description"> - makes quickpolls in a message form</span></li>
-
-  <li>reminder<span class="description"> - Set reminders for yourself or others.</span></li>
-
-  <li>reverseimage<span class="description"> - Search for similar images on the internet using reverse image search</span></li>
-
-  <li>roblox<span class="description"> - Check Roblox profile</span></li>
-
-  <li>screenshot<span class="description"> - screenshots website from a url</span></li>
-
-  <li>createembed<span class="description"> - Create your own embed</span></li>
-
-  <li>serverbanner<span class="description"> - Gets banner of the server</span></li>
-
-  <li>servericon<span class="description"> - Gets server icon for the server</span></li>
-
-  <li>shazam<span class="description"> - Detect music from an audio file attachment</span></li>
-
-  <li>showmessage<span class="description"> - command to show a message</span></li>
-
-  <li>snapchat<span class="description"> - Search snapchat for a profile</span></li>
-
-  <li>serversplash<span class="description"> - view the guild splash</span></li>
-
-  <li>spotify<span class="description"> - Shows a users current track playing on spotify.</span></li>
-
-  <li>subreddit<span class="description"> - view a subreddit</span></li>
-
-  <li>tiktokvideo<span class="description"> - Embeds Video from tiktok and sends it on discord.</span></li>
-
-  <li>tiktok<span class="description"> - Get information on a TikTok profile</span></li>
-
-  <li>timezone<span class="description"> - Convert time between different time zones</span></li>
-
-  <li>translate<span class="description"> - Google translates messages</span></li>
-
-  <li>transparent<span class="description"> - Remove the background of an image</span></li>
-
-  <li>valorant<span class="description"> - Get information on a Valorant profile</span></li>
-
-  <li>gif<span class="description"> - Convert a video to a GIF</span></li>
-
-  <li>wiki<span class="description"> - Get Search Results from Wikipedia</span></li>
-
-</ul>
-</section>
-
-</section>
-<section class="container space-y-6 bg-transparent py-8 md:py-12 lg:py-24" id="statistics">
-  <div class="mx-auto max-w-[58rem] text-muted-foreground text-center">
-      <div class="flex justify-center items-center space-x-12">
-          <div class="flex flex-col items-center bg-gray-200 p-4 rounded-lg">
+  <header class="container top-0 z-40">
+    <div class="flex h-20 items-center justify-between py-6">
+        <div class="flex gap-6 md:gap-10" data-svelte-h="svelte-1qyx72">
+            <a href="https://port.rip" class="flex items-center space-x-2">
+                            <img src="https://cdn.discordapp.com/attachments/1207228450067189761/1224791310737608928/1VgJG6D.png?ex=661ec6cc&is=660c51cc&hm=3387fc9f8062836c8e141f0f0cb75e678c44b54186e49a5f9cbe38fdf88d8157&" alt="Custom Image 1" class="h-11 w-11 border-2 border-card bg-card">
+            </a>
+            <nav class="flex gap-6">
+                <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/tos">Tos</a>
+                <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://port.rip/discord">Support</a>
+                <a class="hidden items-center text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80 sm:flex" href="https://avatar.port.mom">Avatar History</a>
+            </nav>
+        </div>
+        <nav>
+        <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2" data-button-root="">
+        <a href="https://discord.com/oauth2/authorize?client_id=785107195749597235&amp;permissions=8&amp;scope=bot" style="color: black;">Add to Discord</a>
+      </button>          
+        </nav>
+    </div>
+</header>
+<body>
+<div class="container">
+
+      <div class="col-md-12 my-2">
+        <div class="card p-3" style="background-color: black; color: white;">
+          <h5 style="font-size: 2rem; font-weight: bold;">config</h5>
+          <hr />
+          <div class="accordion accordion-flush mt-2">
+    
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#announce" aria-expanded="true" style="background-color: black; color: white;">
+              announce
+            </button>
+          </h2>
+          <div id="announce" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Make an Announcement in your Server</span>
+            </div>
           </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#antibot" aria-expanded="true" style="background-color: black; color: white;">
+              antibot
+            </button>
+          </h2>
+          <div id="antibot" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Enable/disable Anti-bot feature!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#antieveryone" aria-expanded="true" style="background-color: black; color: white;">
+              antieveryone
+            </button>
+          </h2>
+          <div id="antieveryone" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Setup Anti everyone per server and manage whitelist!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#antilink" aria-expanded="true" style="background-color: black; color: white;">
+              antilink
+            </button>
+          </h2>
+          <div id="antilink" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Setup antilink per server!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#antinuke" aria-expanded="true" style="background-color: black; color: white;">
+              antinuke
+            </button>
+          </h2>
+          <div id="antinuke" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">set up a configurable antinuke which will prevent unauthorized bans/kicks/channel creations/etc</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#antiraid" aria-expanded="true" style="background-color: black; color: white;">
+              antiraid
+            </button>
+          </h2>
+          <div id="antiraid" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">enabling antiraid will prevent users from joining the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#antiwords" aria-expanded="true" style="background-color: black; color: white;">
+              antiwords
+            </button>
+          </h2>
+          <div id="antiwords" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Setup antiwords per server!
+This blocks every slang/word in Discord API that is flagged as antiword!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autoanime" aria-expanded="true" style="background-color: black; color: white;">
+              autoanime
+            </button>
+          </h2>
+          <div id="autoanime" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">sets up a channel to send anime pics randomly</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autobanner" aria-expanded="true" style="background-color: black; color: white;">
+              autobanner
+            </button>
+          </h2>
+          <div id="autobanner" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">sets up a channel to send banners randomly</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autopfp" aria-expanded="true" style="background-color: black; color: white;">
+              autopfp
+            </button>
+          </h2>
+          <div id="autopfp" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">sets up a channel to pfps randomly</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autoreact" aria-expanded="true" style="background-color: black; color: white;">
+              autoreact
+            </button>
+          </h2>
+          <div id="autoreact" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Setup auto reactions per server!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autoresponse" aria-expanded="true" style="background-color: black; color: white;">
+              autoresponse
+            </button>
+          </h2>
+          <div id="autoresponse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Create a autoresponder to respond to triggers automatically</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autorole" aria-expanded="true" style="background-color: black; color: white;">
+              autorole
+            </button>
+          </h2>
+          <div id="autorole" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Set up a join role to give a role to new users</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autosetup" aria-expanded="true" style="background-color: black; color: white;">
+              autosetup
+            </button>
+          </h2>
+          <div id="autosetup" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Create auto-posting channels</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autowallpaper" aria-expanded="true" style="background-color: black; color: white;">
+              autowallpaper
+            </button>
+          </h2>
+          <div id="autowallpaper" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">sets up a channel to send wallpapers randomly</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#boost" aria-expanded="true" style="background-color: black; color: white;">
+              boost
+            </button>
+          </h2>
+          <div id="boost" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">set up boost messages</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#customcommand" aria-expanded="true" style="background-color: black; color: white;">
+              customcommand
+            </button>
+          </h2>
+          <div id="customcommand" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">create your own commands for your server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#editembed" aria-expanded="true" style="background-color: black; color: white;">
+              editembed
+            </button>
+          </h2>
+          <div id="editembed" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Edit an embed</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#setperms" aria-expanded="true" style="background-color: black; color: white;">
+              setperms
+            </button>
+          </h2>
+          <div id="setperms" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">sets perms in everyone role</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#joindm" aria-expanded="true" style="background-color: black; color: white;">
+              joindm
+            </button>
+          </h2>
+          <div id="joindm" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">set up a message to send to users privately on join</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#messagelog" aria-expanded="true" style="background-color: black; color: white;">
+              messagelog
+            </button>
+          </h2>
+          <div id="messagelog" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">sends deleted messages to a channel</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#nuke" aria-expanded="true" style="background-color: black; color: white;">
+              nuke
+            </button>
+          </h2>
+          <div id="nuke" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Nukes the channel and recreates a clone</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#pingonjoin" aria-expanded="true" style="background-color: black; color: white;">
+              pingonjoin
+            </button>
+          </h2>
+          <div id="pingonjoin" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Set up ping messages upon user join.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#prefix" aria-expanded="true" style="background-color: black; color: white;">
+              prefix
+            </button>
+          </h2>
+          <div id="prefix" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">configure settings for the bot prefix in a server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#reactionrole-setup" aria-expanded="true" style="background-color: black; color: white;">
+              reactionrole-setup
+            </button>
+          </h2>
+          <div id="reactionrole-setup" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">setup reactionroles</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#resetroleicon" aria-expanded="true" style="background-color: black; color: white;">
+              resetroleicon
+            </button>
+          </h2>
+          <div id="resetroleicon" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">reset the icon of a role</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sendinv" aria-expanded="true" style="background-color: black; color: white;">
+              sendinv
+            </button>
+          </h2>
+          <div id="sendinv" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">send a button with a link to an embed</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#seticon" aria-expanded="true" style="background-color: black; color: white;">
+              seticon
+            </button>
+          </h2>
+          <div id="seticon" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">set the icon of the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#setbanner" aria-expanded="true" style="background-color: black; color: white;">
+              setbanner
+            </button>
+          </h2>
+          <div id="setbanner" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">set the banner of the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#setservername" aria-expanded="true" style="background-color: black; color: white;">
+              setservername
+            </button>
+          </h2>
+          <div id="setservername" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Set a new server name</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#setsplash" aria-expanded="true" style="background-color: black; color: white;">
+              setsplash
+            </button>
+          </h2>
+          <div id="setsplash" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">change the server invite background</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#skullboard" aria-expanded="true" style="background-color: black; color: white;">
+              skullboard
+            </button>
+          </h2>
+          <div id="skullboard" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Set up or remove a message to be sent to a specific channel upon reaching a certain number of reactions.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#testwelcome" aria-expanded="true" style="background-color: black; color: white;">
+              testwelcome
+            </button>
+          </h2>
+          <div id="testwelcome" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">testwelcome members</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#webhook" aria-expanded="true" style="background-color: black; color: white;">
+              webhook
+            </button>
+          </h2>
+          <div id="webhook" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">send content through webhooks</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#welcome" aria-expanded="true" style="background-color: black; color: white;">
+              welcome
+            </button>
+          </h2>
+          <div id="welcome" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">setup welcome messages</span>
+            </div>
+          </div>
+        </div>
+      
+          </div>
+        </div>
       </div>
-  </div>
-</section>
-<script type="96318efbcd220447831ce116-text/javascript">
-{
-    __sveltekit_114ewhk = {
-        base: new URL(".", location).pathname.slice(0, -1)
-    };
-
-    const element = document.currentScript.parentElement;
-
-    const data = [null,null];
-
-    Promise.all([
-        import("./_app/immutable/entry/start.cw5iLlHY.js"),
-        import("./_app/immutable/entry/app.DCtAuGZM.js")
-    ]).then(([kit, app]) => {
-        kit.start(app, element, {
-            node_ids: [0, 3],
-            data,
-            form: null,
-            error: null
-        });
-    });
-}
-</script>
-
+    
+      <div class="col-md-12 my-2">
+        <div class="card p-3" style="background-color: black; color: white;">
+          <h5 style="font-size: 2rem; font-weight: bold;">music</h5>
+          <hr />
+          <div class="accordion accordion-flush mt-2">
+    
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#autoplay" aria-expanded="true" style="background-color: black; color: white;">
+              autoplay
+            </button>
+          </h2>
+          <div id="autoplay" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Stop the bot from playing a random song.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#filter" aria-expanded="true" style="background-color: black; color: white;">
+              filter
+            </button>
+          </h2>
+          <div id="filter" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Set Music Filter</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fm" aria-expanded="true" style="background-color: black; color: white;">
+              fm
+            </button>
+          </h2>
+          <div id="fm" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Shows all last.fm commands</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fmalbum" aria-expanded="true" style="background-color: black; color: white;">
+              fmalbum
+            </button>
+          </h2>
+          <div id="fmalbum" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get information about a specific album.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fmartist" aria-expanded="true" style="background-color: black; color: white;">
+              fmartist
+            </button>
+          </h2>
+          <div id="fmartist" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get information about a specific artist.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fmchart" aria-expanded="true" style="background-color: black; color: white;">
+              fmchart
+            </button>
+          </h2>
+          <div id="fmchart" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get FM Chart.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fmrecent" aria-expanded="true" style="background-color: black; color: white;">
+              fmrecent
+            </button>
+          </h2>
+          <div id="fmrecent" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Show the most recent tracks scrobbled by a user.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fmsimilar" aria-expanded="true" style="background-color: black; color: white;">
+              fmsimilar
+            </button>
+          </h2>
+          <div id="fmsimilar" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get similar artists to a specified artist.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#fmtrack" aria-expanded="true" style="background-color: black; color: white;">
+              fmtrack
+            </button>
+          </h2>
+          <div id="fmtrack" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get information about a specific track.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#grab" aria-expanded="true" style="background-color: black; color: white;">
+              grab
+            </button>
+          </h2>
+          <div id="grab" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Show current song</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#lastfm" aria-expanded="true" style="background-color: black; color: white;">
+              lastfm
+            </button>
+          </h2>
+          <div id="lastfm" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Shows all last.fm commands</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#loop" aria-expanded="true" style="background-color: black; color: white;">
+              loop
+            </button>
+          </h2>
+          <div id="loop" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Loops / Repeat the Music</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#pause" aria-expanded="true" style="background-color: black; color: white;">
+              pause
+            </button>
+          </h2>
+          <div id="pause" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Pause the currently playing song</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#play" aria-expanded="true" style="background-color: black; color: white;">
+              play
+            </button>
+          </h2>
+          <div id="play" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Play some music.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#queue" aria-expanded="true" style="background-color: black; color: white;">
+              queue
+            </button>
+          </h2>
+          <div id="queue" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Show the current queue.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#resume" aria-expanded="true" style="background-color: black; color: white;">
+              resume
+            </button>
+          </h2>
+          <div id="resume" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Resume the currently paused song</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#skip" aria-expanded="true" style="background-color: black; color: white;">
+              skip
+            </button>
+          </h2>
+          <div id="skip" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Skip the current music.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#stop" aria-expanded="true" style="background-color: black; color: white;">
+              stop
+            </button>
+          </h2>
+          <div id="stop" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Stop the music player.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#volume" aria-expanded="true" style="background-color: black; color: white;">
+              volume
+            </button>
+          </h2>
+          <div id="volume" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Change the music player's volume.</span>
+            </div>
+          </div>
+        </div>
+      
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-12 my-2">
+        <div class="card p-3" style="background-color: black; color: white;">
+          <h5 style="font-size: 2rem; font-weight: bold;">fun</h5>
+          <hr />
+          <div class="accordion accordion-flush mt-2">
+    
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#8ball" aria-expanded="true" style="background-color: black; color: white;">
+              8ball
+            </button>
+          </h2>
+          <div id="8ball" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">asks a message from 8ball</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#affect" aria-expanded="true" style="background-color: black; color: white;">
+              affect
+            </button>
+          </h2>
+          <div id="affect" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#beautiful" aria-expanded="true" style="background-color: black; color: white;">
+              beautiful
+            </button>
+          </h2>
+          <div id="beautiful" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#blacktea" aria-expanded="true" style="background-color: black; color: white;">
+              blacktea
+            </button>
+          </h2>
+          <div id="blacktea" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">You have 10 seconds to say a word containing the given group of 3 letters. Failure to do so within the 10 seconds will lose a life.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#blur" aria-expanded="true" style="background-color: black; color: white;">
+              blur
+            </button>
+          </h2>
+          <div id="blur" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#boop" aria-expanded="true" style="background-color: black; color: white;">
+              boop
+            </button>
+          </h2>
+          <div id="boop" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">boops a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#circle" aria-expanded="true" style="background-color: black; color: white;">
+              circle
+            </button>
+          </h2>
+          <div id="circle" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#clap" aria-expanded="true" style="background-color: black; color: white;">
+              clap
+            </button>
+          </h2>
+          <div id="clap" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">it just claps words lmao</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#clone" aria-expanded="true" style="background-color: black; color: white;">
+              clone
+            </button>
+          </h2>
+          <div id="clone" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Makes a webhook to impersonate someone</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#connect4" aria-expanded="true" style="background-color: black; color: white;">
+              connect4
+            </button>
+          </h2>
+          <div id="connect4" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">connect4 in discord!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#creatememe" aria-expanded="true" style="background-color: black; color: white;">
+              creatememe
+            </button>
+          </h2>
+          <div id="creatememe" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Create Custom Memes</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#roll" aria-expanded="true" style="background-color: black; color: white;">
+              roll
+            </button>
+          </h2>
+          <div id="roll" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Roll a die for you!!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#facepalm" aria-expanded="true" style="background-color: black; color: white;">
+              facepalm
+            </button>
+          </h2>
+          <div id="facepalm" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#gay" aria-expanded="true" style="background-color: black; color: white;">
+              gay
+            </button>
+          </h2>
+          <div id="gay" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#gayrate" aria-expanded="true" style="background-color: black; color: white;">
+              gayrate
+            </button>
+          </h2>
+          <div id="gayrate" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">shows gayrate of a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#greet" aria-expanded="true" style="background-color: black; color: white;">
+              greet
+            </button>
+          </h2>
+          <div id="greet" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">greets a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#hack" aria-expanded="true" style="background-color: black; color: white;">
+              hack
+            </button>
+          </h2>
+          <div id="hack" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">spoofs hacks a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#handholding" aria-expanded="true" style="background-color: black; color: white;">
+              handholding
+            </button>
+          </h2>
+          <div id="handholding" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">handholds a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#highfive" aria-expanded="true" style="background-color: black; color: white;">
+              highfive
+            </button>
+          </h2>
+          <div id="highfive" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">highfives a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#hug" aria-expanded="true" style="background-color: black; color: white;">
+              hug
+            </button>
+          </h2>
+          <div id="hug" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">hugs a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#invert" aria-expanded="true" style="background-color: black; color: white;">
+              invert
+            </button>
+          </h2>
+          <div id="invert" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#iq" aria-expanded="true" style="background-color: black; color: white;">
+              iq
+            </button>
+          </h2>
+          <div id="iq" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">iq rates user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#kill" aria-expanded="true" style="background-color: black; color: white;">
+              kill
+            </button>
+          </h2>
+          <div id="kill" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">kills a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#kiss" aria-expanded="true" style="background-color: black; color: white;">
+              kiss
+            </button>
+          </h2>
+          <div id="kiss" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">kisses a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#memetemplates" aria-expanded="true" style="background-color: black; color: white;">
+              memetemplates
+            </button>
+          </h2>
+          <div id="memetemplates" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get all the available meme templates</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ownership" aria-expanded="true" style="background-color: black; color: white;">
+              ownership
+            </button>
+          </h2>
+          <div id="ownership" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">transfers owner to another user as a spoof</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#pat" aria-expanded="true" style="background-color: black; color: white;">
+              pat
+            </button>
+          </h2>
+          <div id="pat" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">pats a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#penis" aria-expanded="true" style="background-color: black; color: white;">
+              penis
+            </button>
+          </h2>
+          <div id="penis" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">penis rates user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#pp" aria-expanded="true" style="background-color: black; color: white;">
+              pp
+            </button>
+          </h2>
+          <div id="pp" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">tells you or a users pp size</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#punch" aria-expanded="true" style="background-color: black; color: white;">
+              punch
+            </button>
+          </h2>
+          <div id="punch" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">punches a user (nibras asked me to create punch command)</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#randomcat" aria-expanded="true" style="background-color: black; color: white;">
+              randomcat
+            </button>
+          </h2>
+          <div id="randomcat" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Sends a random cat picture.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#randomdog" aria-expanded="true" style="background-color: black; color: white;">
+              randomdog
+            </button>
+          </h2>
+          <div id="randomdog" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Sends a random dog picture.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#randomfox" aria-expanded="true" style="background-color: black; color: white;">
+              randomfox
+            </button>
+          </h2>
+          <div id="randomfox" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Sends a random fox picture.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#randomnickname" aria-expanded="true" style="background-color: black; color: white;">
+              randomnickname
+            </button>
+          </h2>
+          <div id="randomnickname" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Gives you a randomized nickname</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#rip" aria-expanded="true" style="background-color: black; color: white;">
+              rip
+            </button>
+          </h2>
+          <div id="rip" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">manipulates user avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#rps" aria-expanded="true" style="background-color: black; color: white;">
+              rps
+            </button>
+          </h2>
+          <div id="rps" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">haves a match of RockPaperScissors with a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sex" aria-expanded="true" style="background-color: black; color: white;">
+              sex
+            </button>
+          </h2>
+          <div id="sex" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">haves sex with a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#simprate" aria-expanded="true" style="background-color: black; color: white;">
+              simprate
+            </button>
+          </h2>
+          <div id="simprate" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">simprate rates user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#slap" aria-expanded="true" style="background-color: black; color: white;">
+              slap
+            </button>
+          </h2>
+          <div id="slap" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">slaps a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#trivia" aria-expanded="true" style="background-color: black; color: white;">
+              trivia
+            </button>
+          </h2>
+          <div id="trivia" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Sends a random trivia question with multiple-choice options.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ttt" aria-expanded="true" style="background-color: black; color: white;">
+              ttt
+            </button>
+          </h2>
+          <div id="ttt" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Tic Tac Toe in discord!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#wide" aria-expanded="true" style="background-color: black; color: white;">
+              wide
+            </button>
+          </h2>
+          <div id="wide" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">widens an avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#youtubetogether" aria-expanded="true" style="background-color: black; color: white;">
+              youtubetogether
+            </button>
+          </h2>
+          <div id="youtubetogether" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Watch Youtube in Discord Voice Channel</span>
+            </div>
+          </div>
+        </div>
+      
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-12 my-2">
+        <div class="card p-3" style="background-color: black; color: white;">
+          <h5 style="font-size: 2rem; font-weight: bold;">information</h5>
+          <hr />
+          <div class="accordion accordion-flush mt-2">
+    
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#avatarhistory" aria-expanded="true" style="background-color: black; color: white;">
+              avatarhistory
+            </button>
+          </h2>
+          <div id="avatarhistory" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">This command likely retrieves the historical avatars (profile pictures) of a user within a Discord server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#boostcount" aria-expanded="true" style="background-color: black; color: white;">
+              boostcount
+            </button>
+          </h2>
+          <div id="boostcount" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description"> It shows the number of boosts a Discord server has received. Boosting a server is a feature in Discord where users can support a server with additional benefits.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#botinfo" aria-expanded="true" style="background-color: black; color: white;">
+              botinfo
+            </button>
+          </h2>
+          <div id="botinfo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Displays information about the Discord bot such as its version, creator, and possibly statistics about its usage</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#botinvite" aria-expanded="true" style="background-color: black; color: white;">
+              botinvite
+            </button>
+          </h2>
+          <div id="botinvite" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Provides an invite link for adding the bot to a Discord server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#serverbots" aria-expanded="true" style="background-color: black; color: white;">
+              serverbots
+            </button>
+          </h2>
+          <div id="serverbots" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description"> Lists the bots present in the Discord server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#commandsused" aria-expanded="true" style="background-color: black; color: white;">
+              commandsused
+            </button>
+          </h2>
+          <div id="commandsused" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">view the amount of commands you used</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#credits" aria-expanded="true" style="background-color: black; color: white;">
+              credits
+            </button>
+          </h2>
+          <div id="credits" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Displays information about who developed and contributed to the Discord bot.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#donate" aria-expanded="true" style="background-color: black; color: white;">
+              donate
+            </button>
+          </h2>
+          <div id="donate" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Provides information or a link for users to donate to support the development and maintenance of the bot.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#embedbuilder" aria-expanded="true" style="background-color: black; color: white;">
+              embedbuilder
+            </button>
+          </h2>
+          <div id="embedbuilder" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">A command used to create rich embeds for messages in Discord.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#emojiinformation" aria-expanded="true" style="background-color: black; color: white;">
+              emojiinformation
+            </button>
+          </h2>
+          <div id="emojiinformation" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get data about the given emoji.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#emojilist" aria-expanded="true" style="background-color: black; color: white;">
+              emojilist
+            </button>
+          </h2>
+          <div id="emojilist" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Lists all the emojis available in the server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#help" aria-expanded="true" style="background-color: black; color: white;">
+              help
+            </button>
+          </h2>
+          <div id="help" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Displays a list of available commands or provides help information on how to use specific commands.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#inrole" aria-expanded="true" style="background-color: black; color: white;">
+              inrole
+            </button>
+          </h2>
+          <div id="inrole" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Views users in a specific role</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#invite" aria-expanded="true" style="background-color: black; color: white;">
+              invite
+            </button>
+          </h2>
+          <div id="invite" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get Links To Invite Me :D</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#invites" aria-expanded="true" style="background-color: black; color: white;">
+              invites
+            </button>
+          </h2>
+          <div id="invites" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Shows Users Joined Through Someone's Invites</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#leaderboard" aria-expanded="true" style="background-color: black; color: white;">
+              leaderboard
+            </button>
+          </h2>
+          <div id="leaderboard" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">View the leaderboard of users with the most messages</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#membercount" aria-expanded="true" style="background-color: black; color: white;">
+              membercount
+            </button>
+          </h2>
+          <div id="membercount" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Displays the current number of members in the Discord server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#messages" aria-expanded="true" style="background-color: black; color: white;">
+              messages
+            </button>
+          </h2>
+          <div id="messages" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">view the amount of messages a user has</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#names" aria-expanded="true" style="background-color: black; color: white;">
+              names
+            </button>
+          </h2>
+          <div id="names" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Show all names you have had</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#oldest" aria-expanded="true" style="background-color: black; color: white;">
+              oldest
+            </button>
+          </h2>
+          <div id="oldest" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Diplays the oldest account in the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ping" aria-expanded="true" style="background-color: black; color: white;">
+              ping
+            </button>
+          </h2>
+          <div id="ping" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description"> Checks the response time of the Discord bot.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#recentemojis" aria-expanded="true" style="background-color: black; color: white;">
+              recentemojis
+            </button>
+          </h2>
+          <div id="recentemojis" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">undefined</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#roleinfo" aria-expanded="true" style="background-color: black; color: white;">
+              roleinfo
+            </button>
+          </h2>
+          <div id="roleinfo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Provides information about a specific role in the Discord server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#roles" aria-expanded="true" style="background-color: black; color: white;">
+              roles
+            </button>
+          </h2>
+          <div id="roles" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Lists all the roles available in the Discord server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#serverinfo" aria-expanded="true" style="background-color: black; color: white;">
+              serverinfo
+            </button>
+          </h2>
+          <div id="serverinfo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Displays general information about the Discord server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#stickerinfo" aria-expanded="true" style="background-color: black; color: white;">
+              stickerinfo
+            </button>
+          </h2>
+          <div id="stickerinfo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Retrieves information about a specific sticker in the server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#support" aria-expanded="true" style="background-color: black; color: white;">
+              support
+            </button>
+          </h2>
+          <div id="support" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">get a link to the support server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#tos" aria-expanded="true" style="background-color: black; color: white;">
+              tos
+            </button>
+          </h2>
+          <div id="tos" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Gets tos of discord bot `port`</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#update" aria-expanded="true" style="background-color: black; color: white;">
+              update
+            </button>
+          </h2>
+          <div id="update" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">bug report command</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#uptime" aria-expanded="true" style="background-color: black; color: white;">
+              uptime
+            </button>
+          </h2>
+          <div id="uptime" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Shows how long the bot have been online</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#userinfo" aria-expanded="true" style="background-color: black; color: white;">
+              userinfo
+            </button>
+          </h2>
+          <div id="userinfo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get info about your account or mentioned user's account!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#vanityjoins" aria-expanded="true" style="background-color: black; color: white;">
+              vanityjoins
+            </button>
+          </h2>
+          <div id="vanityjoins" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">returns vanity link and uses</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#youngest" aria-expanded="true" style="background-color: black; color: white;">
+              youngest
+            </button>
+          </h2>
+          <div id="youngest" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Diplays the youngest account in the server</span>
+            </div>
+          </div>
+        </div>
+      
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-12 my-2">
+        <div class="card p-3" style="background-color: black; color: white;">
+          <h5 style="font-size: 2rem; font-weight: bold;">moderation</h5>
+          <hr />
+          <div class="accordion accordion-flush mt-2">
+    
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#abolish" aria-expanded="true" style="background-color: black; color: white;">
+              abolish
+            </button>
+          </h2>
+          <div id="abolish" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Remove all roles from a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#auditlogs" aria-expanded="true" style="background-color: black; color: white;">
+              auditlogs
+            </button>
+          </h2>
+          <div id="auditlogs" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Displays the last actions taken in the server's audit logs</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ban" aria-expanded="true" style="background-color: black; color: white;">
+              ban
+            </button>
+          </h2>
+          <div id="ban" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Ban anyone from a server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#bancount" aria-expanded="true" style="background-color: black; color: white;">
+              bancount
+            </button>
+          </h2>
+          <div id="bancount" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">shows the amount of users banner in a server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#botclear" aria-expanded="true" style="background-color: black; color: white;">
+              botclear
+            </button>
+          </h2>
+          <div id="botclear" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">purge messages from bots</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#clear" aria-expanded="true" style="background-color: black; color: white;">
+              clear
+            </button>
+          </h2>
+          <div id="clear" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">clears messages</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#clearsnipe" aria-expanded="true" style="background-color: black; color: white;">
+              clearsnipe
+            </button>
+          </h2>
+          <div id="clearsnipe" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Clear the latest sniped message.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#copyembed" aria-expanded="true" style="background-color: black; color: white;">
+              copyembed
+            </button>
+          </h2>
+          <div id="copyembed" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">copies a embed</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#editsnipe" aria-expanded="true" style="background-color: black; color: white;">
+              editsnipe
+            </button>
+          </h2>
+          <div id="editsnipe" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">snipes an edited message.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#findemoji" aria-expanded="true" style="background-color: black; color: white;">
+              findemoji
+            </button>
+          </h2>
+          <div id="findemoji" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">searches through emojis from a random api</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#hardban" aria-expanded="true" style="background-color: black; color: white;">
+              hardban
+            </button>
+          </h2>
+          <div id="hardban" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Ban and remove a user from the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#hideall" aria-expanded="true" style="background-color: black; color: white;">
+              hideall
+            </button>
+          </h2>
+          <div id="hideall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">hides all channels</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#imagemute" aria-expanded="true" style="background-color: black; color: white;">
+              imagemute
+            </button>
+          </h2>
+          <div id="imagemute" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Prevents a user from sending embed links and attachments in the server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#imageunmute" aria-expanded="true" style="background-color: black; color: white;">
+              imageunmute
+            </button>
+          </h2>
+          <div id="imageunmute" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Allows a previously muted user to send embed links and attachments in the server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#jail" aria-expanded="true" style="background-color: black; color: white;">
+              jail
+            </button>
+          </h2>
+          <div id="jail" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">jails the specified member (sets up upon first use)</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#jailed" aria-expanded="true" style="background-color: black; color: white;">
+              jailed
+            </button>
+          </h2>
+          <div id="jailed" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">shows number of people jailed</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#kick" aria-expanded="true" style="background-color: black; color: white;">
+              kick
+            </button>
+          </h2>
+          <div id="kick" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Kick a user from the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#lock" aria-expanded="true" style="background-color: black; color: white;">
+              lock
+            </button>
+          </h2>
+          <div id="lock" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">locks a specific channel</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#lockall" aria-expanded="true" style="background-color: black; color: white;">
+              lockall
+            </button>
+          </h2>
+          <div id="lockall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">locks all channels</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#massdrag" aria-expanded="true" style="background-color: black; color: white;">
+              massdrag
+            </button>
+          </h2>
+          <div id="massdrag" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Mass drags people from a voice channel.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#mute" aria-expanded="true" style="background-color: black; color: white;">
+              mute
+            </button>
+          </h2>
+          <div id="mute" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Mutes the specified user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#nickname" aria-expanded="true" style="background-color: black; color: white;">
+              nickname
+            </button>
+          </h2>
+          <div id="nickname" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Sets Or Changes Nickname Of An User</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#prune" aria-expanded="true" style="background-color: black; color: white;">
+              prune
+            </button>
+          </h2>
+          <div id="prune" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Kick inactive users who have been inactive for 30 days or more from the server.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#purge" aria-expanded="true" style="background-color: black; color: white;">
+              purge
+            </button>
+          </h2>
+          <div id="purge" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Deletes messages from a channel</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#reactionsnipe" aria-expanded="true" style="background-color: black; color: white;">
+              reactionsnipe
+            </button>
+          </h2>
+          <div id="reactionsnipe" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Snipes a reaction on the last message.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#reinvite" aria-expanded="true" style="background-color: black; color: white;">
+              reinvite
+            </button>
+          </h2>
+          <div id="reinvite" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Send an invite link to a previously banned user.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#role" aria-expanded="true" style="background-color: black; color: white;">
+              role
+            </button>
+          </h2>
+          <div id="role" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Add or remove a role to a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#roleall" aria-expanded="true" style="background-color: black; color: white;">
+              roleall
+            </button>
+          </h2>
+          <div id="roleall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Add or remove a role to everyone</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#roleicon" aria-expanded="true" style="background-color: black; color: white;">
+              roleicon
+            </button>
+          </h2>
+          <div id="roleicon" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Shows or sets an icon for a role</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#slowmode" aria-expanded="true" style="background-color: black; color: white;">
+              slowmode
+            </button>
+          </h2>
+          <div id="slowmode" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Set slowmode in the channel</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#snipe" aria-expanded="true" style="background-color: black; color: white;">
+              snipe
+            </button>
+          </h2>
+          <div id="snipe" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Snipe a recently deleted message</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#softban" aria-expanded="true" style="background-color: black; color: white;">
+              softban
+            </button>
+          </h2>
+          <div id="softban" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Softban a user from the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#stealall" aria-expanded="true" style="background-color: black; color: white;">
+              stealall
+            </button>
+          </h2>
+          <div id="stealall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Add Multiple Emojis at once</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#cloneembed" aria-expanded="true" style="background-color: black; color: white;">
+              cloneembed
+            </button>
+          </h2>
+          <div id="cloneembed" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">clone a embed from the channel server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#stealsticker" aria-expanded="true" style="background-color: black; color: white;">
+              stealsticker
+            </button>
+          </h2>
+          <div id="stealsticker" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Steals a sticker and adds it to the server quickly</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#timeout" aria-expanded="true" style="background-color: black; color: white;">
+              timeout
+            </button>
+          </h2>
+          <div id="timeout" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Timeout the specified user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#unban" aria-expanded="true" style="background-color: black; color: white;">
+              unban
+            </button>
+          </h2>
+          <div id="unban" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Unbans a banned user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#unbanall" aria-expanded="true" style="background-color: black; color: white;">
+              unbanall
+            </button>
+          </h2>
+          <div id="unbanall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">unban all banned users</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#unhideall" aria-expanded="true" style="background-color: black; color: white;">
+              unhideall
+            </button>
+          </h2>
+          <div id="unhideall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">unhides all channels</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#unjail" aria-expanded="true" style="background-color: black; color: white;">
+              unjail
+            </button>
+          </h2>
+          <div id="unjail" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Unjail the specified user.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#unlock" aria-expanded="true" style="background-color: black; color: white;">
+              unlock
+            </button>
+          </h2>
+          <div id="unlock" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">unlocks channel</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#unlockall" aria-expanded="true" style="background-color: black; color: white;">
+              unlockall
+            </button>
+          </h2>
+          <div id="unlockall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">unlocks all channels</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#unmute" aria-expanded="true" style="background-color: black; color: white;">
+              unmute
+            </button>
+          </h2>
+          <div id="unmute" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">unmutes a specified user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#untimeout" aria-expanded="true" style="background-color: black; color: white;">
+              untimeout
+            </button>
+          </h2>
+          <div id="untimeout" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Remove timeout from the specified user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#userlogs" aria-expanded="true" style="background-color: black; color: white;">
+              userlogs
+            </button>
+          </h2>
+          <div id="userlogs" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Displays the last actions taken by a specific user in the server's audit logs</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#voice" aria-expanded="true" style="background-color: black; color: white;">
+              voice
+            </button>
+          </h2>
+          <div id="voice" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">shows moderation commands related to voice</span>
+            </div>
+          </div>
+        </div>
+      
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-12 my-2">
+        <div class="card p-3" style="background-color: black; color: white;">
+          <h5 style="font-size: 2rem; font-weight: bold;">utilities</h5>
+          <hr />
+          <div class="accordion accordion-flush mt-2">
+    
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#afk" aria-expanded="true" style="background-color: black; color: white;">
+              afk
+            </button>
+          </h2>
+          <div id="afk" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">sets up afk in a server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#aiimage" aria-expanded="true" style="background-color: black; color: white;">
+              aiimage
+            </button>
+          </h2>
+          <div id="aiimage" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">generates ai generated images</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#animesearch" aria-expanded="true" style="background-color: black; color: white;">
+              animesearch
+            </button>
+          </h2>
+          <div id="animesearch" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get info about an anime</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#avatar" aria-expanded="true" style="background-color: black; color: white;">
+              avatar
+            </button>
+          </h2>
+          <div id="avatar" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">View a user's avatar</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#banner" aria-expanded="true" style="background-color: black; color: white;">
+              banner
+            </button>
+          </h2>
+          <div id="banner" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">shows banner of a user</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#calculator" aria-expanded="true" style="background-color: black; color: white;">
+              calculator
+            </button>
+          </h2>
+          <div id="calculator" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">opens calculator in discord.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#color" aria-expanded="true" style="background-color: black; color: white;">
+              color
+            </button>
+          </h2>
+          <div id="color" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">shows a color through a color code</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#crypto" aria-expanded="true" style="background-color: black; color: white;">
+              crypto
+            </button>
+          </h2>
+          <div id="crypto" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">check specific crypto currencies value</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#define" aria-expanded="true" style="background-color: black; color: white;">
+              define
+            </button>
+          </h2>
+          <div id="define" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Give information about urban words!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#simpleembed" aria-expanded="true" style="background-color: black; color: white;">
+              simpleembed
+            </button>
+          </h2>
+          <div id="simpleembed" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">admin only make embed command</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#enlarge" aria-expanded="true" style="background-color: black; color: white;">
+              enlarge
+            </button>
+          </h2>
+          <div id="enlarge" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Converting Server emoji to PNG/GIF!</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#firstmessage" aria-expanded="true" style="background-color: black; color: white;">
+              firstmessage
+            </button>
+          </h2>
+          <div id="firstmessage" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Returns first message of that channel</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#github" aria-expanded="true" style="background-color: black; color: white;">
+              github
+            </button>
+          </h2>
+          <div id="github" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">view information on a github account</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#image" aria-expanded="true" style="background-color: black; color: white;">
+              image
+            </button>
+          </h2>
+          <div id="image" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Fetch images from Google</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#imbd" aria-expanded="true" style="background-color: black; color: white;">
+              imbd
+            </button>
+          </h2>
+          <div id="imbd" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get the information about series and movie</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#instagram" aria-expanded="true" style="background-color: black; color: white;">
+              instagram
+            </button>
+          </h2>
+          <div id="instagram" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Find out some nice Instagram statistics</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ipinfo" aria-expanded="true" style="background-color: black; color: white;">
+              ipinfo
+            </button>
+          </h2>
+          <div id="ipinfo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get detailed information on a public IP address</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ocr" aria-expanded="true" style="background-color: black; color: white;">
+              ocr
+            </button>
+          </h2>
+          <div id="ocr" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Read text from an image using OCR</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#permisssions" aria-expanded="true" style="background-color: black; color: white;">
+              permisssions
+            </button>
+          </h2>
+          <div id="permisssions" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">List the server permissions of mentioned user or provided ID</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#pinterest" aria-expanded="true" style="background-color: black; color: white;">
+              pinterest
+            </button>
+          </h2>
+          <div id="pinterest" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">shows pictures from pinterest</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#playstation" aria-expanded="true" style="background-color: black; color: white;">
+              playstation
+            </button>
+          </h2>
+          <div id="playstation" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get information on a PlayStation profile</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#presence" aria-expanded="true" style="background-color: black; color: white;">
+              presence
+            </button>
+          </h2>
+          <div id="presence" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Shows specified users presence</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#qr" aria-expanded="true" style="background-color: black; color: white;">
+              qr
+            </button>
+          </h2>
+          <div id="qr" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Reads or makes a qr</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#quickpoll" aria-expanded="true" style="background-color: black; color: white;">
+              quickpoll
+            </button>
+          </h2>
+          <div id="quickpoll" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">makes quickpolls in a message form</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#reminder" aria-expanded="true" style="background-color: black; color: white;">
+              reminder
+            </button>
+          </h2>
+          <div id="reminder" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Set reminders for yourself or others.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#reverseimage" aria-expanded="true" style="background-color: black; color: white;">
+              reverseimage
+            </button>
+          </h2>
+          <div id="reverseimage" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Search for similar images on the internet using reverse image search</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#roblox" aria-expanded="true" style="background-color: black; color: white;">
+              roblox
+            </button>
+          </h2>
+          <div id="roblox" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Check Roblox profile</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#screenshot" aria-expanded="true" style="background-color: black; color: white;">
+              screenshot
+            </button>
+          </h2>
+          <div id="screenshot" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">screenshots website from a url</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#createembed" aria-expanded="true" style="background-color: black; color: white;">
+              createembed
+            </button>
+          </h2>
+          <div id="createembed" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Create your own embed</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#serverbanner" aria-expanded="true" style="background-color: black; color: white;">
+              serverbanner
+            </button>
+          </h2>
+          <div id="serverbanner" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Gets banner of the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#servericon" aria-expanded="true" style="background-color: black; color: white;">
+              servericon
+            </button>
+          </h2>
+          <div id="servericon" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Gets server icon for the server</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#shazam" aria-expanded="true" style="background-color: black; color: white;">
+              shazam
+            </button>
+          </h2>
+          <div id="shazam" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Detect music from an audio file attachment</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#showmessage" aria-expanded="true" style="background-color: black; color: white;">
+              showmessage
+            </button>
+          </h2>
+          <div id="showmessage" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">command to show a message</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#snapchat" aria-expanded="true" style="background-color: black; color: white;">
+              snapchat
+            </button>
+          </h2>
+          <div id="snapchat" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Search snapchat for a profile</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#serversplash" aria-expanded="true" style="background-color: black; color: white;">
+              serversplash
+            </button>
+          </h2>
+          <div id="serversplash" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">view the guild splash</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#spotify" aria-expanded="true" style="background-color: black; color: white;">
+              spotify
+            </button>
+          </h2>
+          <div id="spotify" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Shows a users current track playing on spotify.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#subreddit" aria-expanded="true" style="background-color: black; color: white;">
+              subreddit
+            </button>
+          </h2>
+          <div id="subreddit" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">view a subreddit</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#tiktokvideo" aria-expanded="true" style="background-color: black; color: white;">
+              tiktokvideo
+            </button>
+          </h2>
+          <div id="tiktokvideo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Embeds Video from tiktok and sends it on discord.</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#tiktok" aria-expanded="true" style="background-color: black; color: white;">
+              tiktok
+            </button>
+          </h2>
+          <div id="tiktok" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get information on a TikTok profile</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#timezone" aria-expanded="true" style="background-color: black; color: white;">
+              timezone
+            </button>
+          </h2>
+          <div id="timezone" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Convert time between different time zones</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#translate" aria-expanded="true" style="background-color: black; color: white;">
+              translate
+            </button>
+          </h2>
+          <div id="translate" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Google translates messages</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#transparent" aria-expanded="true" style="background-color: black; color: white;">
+              transparent
+            </button>
+          </h2>
+          <div id="transparent" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Remove the background of an image</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#valorant" aria-expanded="true" style="background-color: black; color: white;">
+              valorant
+            </button>
+          </h2>
+          <div id="valorant" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get information on a Valorant profile</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#gif" aria-expanded="true" style="background-color: black; color: white;">
+              gif
+            </button>
+          </h2>
+          <div id="gif" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Convert a video to a GIF</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#wiki" aria-expanded="true" style="background-color: black; color: white;">
+              wiki
+            </button>
+          </h2>
+          <div id="wiki" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <span class="command-description">Get Search Results from Wikipedia</span>
+            </div>
+          </div>
+        </div>
+      
+          </div>
+        </div>
+      </div>
+    
+<section class="container space-y-6 bg-transparent py-8 md:py-12 lg:py-24" id="statistics">
+<div class="mx-auto max-w-[58rem] text-muted-foreground text-center">
+    <div class="flex justify-center items-center space-x-12">
+        <div class="flex flex-col items-center bg-gray-200 p-4 rounded-lg">
+        </div>
+    </div>
 </div>
-<script src="./js/UlFZaGvHUFYj.js" data-cf-settings="96318efbcd220447831ce116-|49" defer=""></script>
-</body>
+</section>  
+</div>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="js/UlFZaGvHUFYj.js" data-cf-settings="96318efbcd220447831ce116-|49" defer=""></script>
+
 </html>
